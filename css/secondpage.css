@@ -1,0 +1,32 @@
+/* Colors */
+.bg-midblue {
+    background-color: #0137a3;
+}
+.bg-darkblue {
+    background-color: rgb(0, 0, 106);
+}
+
+.samples li {
+    transition: .3s;
+}
+.samples li:hover{
+    background: linear-gradient(to right, #3675f4,  #5a91ff, rgb(152, 255, 152));
+    border: none;
+    outline: none;
+}
+.samples li:hover label {
+    color: white;
+}
+
+.expandable-section {
+    margin: 5px 10px 0px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+.trapezio {
+    width: 100%;
+    clip-path: polygon(0% 0, 100% 0, 93% 100%, 5% 90%);
+    background: #0137a3;
+}

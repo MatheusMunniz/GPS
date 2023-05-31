@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="./src/GPSicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>GPS</title>
+  </head>
+  <body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-midblue ">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand"><img src="./src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 10px; border-right: 1px solid white;"></a>
+                <a href="#" class="navbar-brand"><img src="./src/dunabioinfo.png" alt="" style="width: 75px;"></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse7">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link"></a>
+                    </div>
+                    <form class="d-flex ms-auto">
+                        <input type="text" class="form-control me-sm-2" placeholder="Search">
+                        <button type="submit" class="btn btn-outline-light"><i class="bi bi-search"></i></button>
+                    </form>
+
+                    <!-- <div class="profile">
+                       <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./src/avatar.png" id="navbarAvatar" alt="">
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Log out <i class="bi bi-box-arrow-left"></i>
+                          </a></li>
+                        </ul>
+                      </div>
+                    </div> -->
+
+                </div>
+            </div>        
+        </nav>
+
+        <section>
+            <div class="faixaprincipal container-fluid px-4 py-5 trapezio">
+                <div class="container row flex-lg-row-reverse align-items-center g-4 py-5 d-flex justify-content-center">
+                    <div class="col-10 col-sm-8 col-lg-6">
+                        <img src="./src/WhiteLogoComplete.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold lh-1 mb-3 fs-1">Welcome to <span style="color: #0ed700;">GPS</span>! Your Genetic Personal System</h1>
+                        <p class="lead" style="text-align: justify;">Introducing the groundbreaking "Genetic Personal System" (GPS), a revolutionary leap forward in personalized health and well-being. Harnessing the power of cutting-edge genetic research, GPS is a comprehensive platform designed to unlock the secrets hidden within your DNA and provide invaluable insights into your unique genetic makeup. Welcome to a future where the power of genetics is at your fingertips. Embrace the Genetic Personal System and unlock the key to a healthier, more fulfilling life, uniquely tailored to you.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start" >
+                            <button type="button" class="btn btn-success btn-lg px-4 me-md-10" style="z-index: 11;" data-bs-toggle="modal" data-bs-target="#modalSignin">Join Us</button>
+                            <!-- <button type="button" class="btn btn-success btn-lg px-4" style="z-index: 11;">Login</button> -->
+                        </div>
+                    </div>
+                </div>
+                <canvas></canvas>
+            </div>
+
+
+
+            <div class="container px-4 py-5" id="hanging-icons">
+            <h2 class="pb-2 border-bottom">Features</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="col d-flex align-items-start">
+                <div>
+                    <div class="d-flex lh-1" style="gap: 15px;"><i class="bi bi-heart-pulse" style="font-size: 2rem;"></i><h2>Health</h2></div>
+                    <p style="text-align: justify; height: 240px;">With GPS, embark on a transformative journey towards optimizing your health, fitness, and lifestyle choices. Through advanced genetic analysis, the system uncovers a wealth of information about your inherited traits, predispositions, and potential health risks. Discover your genetic blueprint, understanding how your genes influence everything from your metabolism and nutrient absorption to your response to exercise and environmental factors.</p>
+                </div>
+                </div>
+                
+                <div class="col d-flex align-items-start">
+                <div>
+                    <div class="d-flex lh-1" style="gap: 15px;"><i class="bi bi-clipboard-heart" style="font-size: 2rem;"></i><h2>Wellness</h2></div>
+                    <p style="text-align: justify; height: 240px;">GPS empowers you to make informed decisions tailored specifically to your genetic profile. Unlock personalized nutrition plans, tailored exercise regimens, and lifestyle recommendations that align with your body's inherent needs. Say goodbye to generic, one-size-fits-all approaches and embrace a truly individualized path towards a healthier, more vibrant you.</p>
+                </div>
+                </div>
+
+                <div class="col d-flex align-items-start">
+                <div>
+                    <div class="d-flex lh-1" style="gap: 15px;"><i class="bi bi-shield-lock" style="font-size: 2rem;"></i><h2>Security</h2></div>
+                    <p style="text-align: justify; height: 240px;">Built on a foundation of scientific rigor and cutting-edge technology, GPS ensures the utmost privacy and security of your genetic data. You remain in control of your information, with stringent safeguards in place to protect your privacy and confidentiality.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalSignin" style="">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow" style="background-image: linear-gradient(to bottom, #0137a3, #0137a3, white) !important;">
+  
+            <div class="modal-header p-5 pb-4 border-bottom-0 bg">
+              <img src="./src/GPSicon.png" style="width: 50px;">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+  
+            <div class="modal-body p-5 pt-0">
+              <form class="">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit"><a href="./html/secondpage.html">Sign up</a></button>
+                <small class="text-body-secondary" style="color: white;">By clicking Sign up, you agree to the terms of use.</small>
+                <hr class="my-4">
+                <h2 class="fs-5 fw-bold mb-3" style="color: white;">Or</h2>
+
+                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+                  Sign up with Google
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- Particles -->
+    <script>
+        const STAR_COLOR = '#fff';
+        const STAR_SIZE = 5;
+        const STAR_MIN_SCALE = 0.2;
+        const OVERFLOW_THRESHOLD = 20;
+        const STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 20;
+
+        const canvas = document.querySelector( 'canvas' ),
+            context = canvas.getContext( '2d' );
+
+        let scale = 1, // device pixel ratio
+            width,
+            height;
+
+        let stars = [];
+
+        let pointerX,
+            pointerY;
+
+        let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
+
+        let touchInput = false;
+
+        generate();
+        resize();
+        step();
+
+        window.onresize = resize;
+        canvas.onmousemove = onMouseMove;
+        canvas.ontouchmove = onTouchMove;
+        canvas.ontouchend = onMouseLeave;
+        document.onmouseleave = onMouseLeave;
+
+        function generate() {
+
+        for( let i = 0; i < STAR_COUNT; i++ ) {
+            stars.push({
+            x: 0,
+            y: 0,
+            z: STAR_MIN_SCALE + Math.random() * ( 1 - STAR_MIN_SCALE )
+            });
+        }
+
+        }
+
+        function placeStar( star ) {
+
+        star.x = Math.random() * width;
+        star.y = Math.random() * height;
+
+        }
+
+        function recycleStar( star ) {
+
+        let direction = 'z';
+
+        let vx = Math.abs( velocity.x ),
+                vy = Math.abs( velocity.y );
+
+        if( vx > 1 || vy > 1 ) {
+            let axis;
+
+            if( vx > vy ) {
+            axis = Math.random() < vx / ( vx + vy ) ? 'h' : 'v';
+            }
+            else {
+            axis = Math.random() < vy / ( vx + vy ) ? 'v' : 'h';
+            }
+
+            if( axis === 'h' ) {
+            direction = velocity.x > 0 ? 'l' : 'r';
+            }
+            else {
+            direction = velocity.y > 0 ? 't' : 'b';
+            }
+        }
+        
+        star.z = STAR_MIN_SCALE + Math.random() * ( 1 - STAR_MIN_SCALE );
+
+        if( direction === 'z' ) {
+            star.z = 0.1;
+            star.x = Math.random() * width;
+            star.y = Math.random() * height;
+        }
+        else if( direction === 'l' ) {
+            star.x = -OVERFLOW_THRESHOLD;
+            star.y = height * Math.random();
+        }
+        else if( direction === 'r' ) {
+            star.x = width + OVERFLOW_THRESHOLD;
+            star.y = height * Math.random();
+        }
+        else if( direction === 't' ) {
+            star.x = width * Math.random();
+            star.y = -OVERFLOW_THRESHOLD;
+        }
+        else if( direction === 'b' ) {
+            star.x = width * Math.random();
+            star.y = height + OVERFLOW_THRESHOLD;
+        }
+
+        }
+
+        function resize() {
+
+        scale = window.devicePixelRatio || 1;
+
+        width = window.innerWidth * scale;
+        height = window.innerHeight * scale;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        stars.forEach( placeStar );
+
+        }
+
+        function step() {
+
+        context.clearRect( 0, 0, width, height );
+
+        update();
+        render();
+
+        requestAnimationFrame( step );
+
+        }
+
+        function update() {
+
+        velocity.tx *= 0.6;
+        velocity.ty *= 0.6;
+
+        velocity.x += ( velocity.tx - velocity.x ) * 0.8;
+        velocity.y += ( velocity.ty - velocity.y ) * 0.8;
+
+        stars.forEach( ( star ) => {
+
+            star.x += velocity.x * star.z;
+            star.y += velocity.y * star.z;
+
+            star.x += ( star.x - width/2 ) * velocity.z * star.z;
+            star.y += ( star.y - height/2 ) * velocity.z * star.z;
+            star.z += velocity.z;
+        
+            // recycle when out of bounds
+            if( star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD ) {
+            recycleStar( star );
+            }
+
+        } );
+
+        }
+
+        function render() {
+
+        stars.forEach( ( star ) => {
+
+            context.beginPath();
+            context.lineCap = 'round';
+            context.lineWidth = STAR_SIZE * star.z * scale;
+            context.globalAlpha = 0.5 + 0.5*Math.random();
+            context.strokeStyle = STAR_COLOR;
+
+            context.beginPath();
+            context.moveTo( star.x, star.y );
+
+            var tailX = velocity.x * 2,
+                tailY = velocity.y * 2;
+
+            // stroke() wont work on an invisible line
+            if( Math.abs( tailX ) < 0.1 ) tailX = 0.5;
+            if( Math.abs( tailY ) < 0.1 ) tailY = 0.5;
+
+            context.lineTo( star.x + tailX, star.y + tailY );
+
+            context.stroke();
+
+        } );
+
+        }
+
+        function movePointer( x, y ) {
+
+        if( typeof pointerX === 'number' && typeof pointerY === 'number' ) {
+
+            let ox = x - pointerX,
+                oy = y - pointerY;
+
+            velocity.tx = velocity.tx + ( ox / 8*scale ) * ( touchInput ? 1 : -1 );
+            velocity.ty = velocity.ty + ( oy / 8*scale ) * ( touchInput ? 1 : -1 );
+
+        }
+
+        pointerX = x;
+        pointerY = y;
+
+        }
+
+        function onMouseMove( event ) {
+
+        touchInput = false;
+
+        movePointer( event.clientX, event.clientY );
+
+        }
+
+        function onTouchMove( event ) {
+
+        touchInput = true;
+
+        movePointer( event.touches[0].clientX, event.touches[0].clientY, true );
+
+        event.preventDefault();
+
+        }
+
+        function onMouseLeave() {
+
+        pointerX = null;
+        pointerY = null;
+
+        }
+
+    </script>
+    </body>
+</html>
