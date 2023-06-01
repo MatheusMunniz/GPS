@@ -18,7 +18,7 @@
     <main>
         <nav class="navbar navbar-expand-lg navbar-dark bg-midblue ">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand"><img src="./src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 10px; border-right: 1px solid white;"></a>
+                <a href="#" class="navbar-brand"><img src="./src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 15px; border-right: 1px solid white;"></a>
                 <a href="#" class="navbar-brand"><img src="./src/dunabioinfo.png" alt="" style="width: 75px;"></a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse7">
                     <span class="navbar-toggler-icon"></span>
@@ -31,22 +31,6 @@
                         <input type="text" class="form-control me-sm-2" placeholder="Search">
                         <button type="submit" class="btn btn-outline-light"><i class="bi bi-search"></i></button>
                     </form>
-
-                    <!-- <div class="profile">
-                       <div class="btn-group">
-                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./src/avatar.png" id="navbarAvatar" alt="">
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Log out <i class="bi bi-box-arrow-left"></i>
-                          </a></li>
-                        </ul>
-                      </div>
-                    </div> -->
 
                 </div>
             </div>        
@@ -101,36 +85,37 @@
     </main>
 
     <!-- Login Modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalSignin" style="">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content rounded-4 shadow" style="background-image: linear-gradient(to bottom, #0137a3, #0137a3, white) !important;">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="modal-dialog " role="document ">
+            <img class="logomodal hover-rotate" src="./src/GPSicon.png">
+            <div class="modal-content rounded-4 shadow trapeziomodal" style="margin-top: 20%;">
   
-            <div class="modal-header p-5 pb-4 border-bottom-0 bg">
-              <img src="./src/GPSicon.png" style="width: 50px;">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-  
-            <div class="modal-body p-5 pt-0">
-              <form class="">
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Email address</label>
+                <div class="modal-header p-5 pb-4 border-bottom-0 bg">
+                
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
                 </div>
-                <div class="form-floating mb-3">
-                  <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Password</label>
-                </div>
-                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit"><a href="./html/secondpage.html">Sign up</a></button>
-                <small class="text-body-secondary" style="color: white;">By clicking Sign up, you agree to the terms of use.</small>
-                <hr class="my-4">
-                <h2 class="fs-5 fw-bold mb-3" style="color: white;">Or</h2>
+    
+                <div class="modal-body p-5 pt-0 cardshadow">
+                <form class="">
+                    <div class="form-floating mb-3">
+                    <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                    <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                    </div>
+                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit"><a href="./html/secondpage.html">Sign up</a></button>
+                    <small class="text-body-secondary" style="color: white;">By clicking Sign up, you agree to the terms of use.</small>
+                    <hr class="my-4" style="color:white;">
+                    <h2 class="fs-5 fw-bold mb-3" style="color: white;">Or</h2>
 
-                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-                  <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
-                  Sign up with Google
-                </button>
-              </form>
-            </div>
+                    <button class="w-100 py-2 mb-2 btn btn btn-light rounded-3" type="submit">
+                    <svg class="bi me-1 " width="16" height="16"><use xlink:href="#facebook"/></svg>
+                    Sign up with Google
+                    </button>
+                </form>
+                </div>
           </div>
         </div>
     </div>

@@ -36,3 +36,42 @@ canvas {
 }
 
 /* --- */
+
+/* Modal */
+.modal-content {
+    border: none !important;
+    background: linear-gradient(-45deg, rgb(0, 0, 106), rgb(0, 0, 106), #49ff3c) !important;
+}
+.logomodal {
+    pointer-events: auto;
+    margin: 5px;
+    width: 40px; 
+    position: absolute;
+    z-index: 1600;
+    transition: 0.3s;
+    user-select: none;
+}
+
+  .hover-rotate {
+    animation: spin 3s infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+        filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.652))
+    }
+    50%{
+        filter:drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.652))
+    }
+    100% {
+      transform: rotate(360deg);
+      filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.5))
+    }
+  }
+
+
+
+.trapeziomodal {
+    clip-path: polygon(0% 23%, 23% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
