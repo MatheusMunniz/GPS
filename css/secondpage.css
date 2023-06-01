@@ -44,7 +44,9 @@
     height: 36px;
     transition: .3s;
 }
-
+.avatar-group {
+    width: 150px;
+}
 .avatar-group .avatar {
     position: relative;
     z-index: 2;

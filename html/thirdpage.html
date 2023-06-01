@@ -18,54 +18,59 @@
   </head>
   <body>
     <main>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-midblue ">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand"><img src="../src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 10px; border-right: 1px solid white;"></a>
-                <a href="#" class="navbar-brand"><img src="../src/dunabioinfo.png" alt="" style="width: 75px;"></a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse7">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse7">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link"></a>
+        <header class="">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-midblue">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand"><img src="../src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 10px; border-right: 1px solid white;"></a>
+                    <a href="#" class="navbar-brand"><img src="../src/dunabioinfo.png" alt="" style="width: 75px;"></a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse7">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse7">
+                        <div class="navbar-nav">
+                            <a href="#" class="nav-item nav-link"></a>
+                        </div>
+                        <!-- <form class="d-flex ms-auto">
+                            <input type="text" class="form-control me-sm-2" placeholder="Search by gene">
+                            <button type="submit" class="btn btn-outline-light"><i class="bi bi-search"></i></button>
+                        </form> -->
+    
+                        <div class="d-flex ms-auto profile">
+                           <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../src/avatar.png" id="navbarAvatar" alt="">
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="../index.html">Log out <i class="bi bi-box-arrow-left"></i>
+                              </a></li>
+                            </ul>
+                          </div>
+                        </div>
+    
                     </div>
-                    <!-- <form class="d-flex ms-auto">
-                        <input type="text" class="form-control me-sm-2" placeholder="Search by gene">
-                        <button type="submit" class="btn btn-outline-light"><i class="bi bi-search"></i></button>
-                    </form> -->
-
-                    <div class="d-flex ms-auto profile">
-                       <div class="btn-group">
-                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../src/avatar.png" id="navbarAvatar" alt="">
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../index.html">Log out <i class="bi bi-box-arrow-left"></i>
-                          </a></li>
-                        </ul>
-                      </div>
-                    </div>
-
-                </div>
-            </div>        
-        </nav>
-
-        <section class="pt-5">
-            <!-- Table -->
-            <div class="col">
-            
-            <div class="card">
+                </div>        
+            </nav>
+            <div class="card" style="top: 0; margin: 0; position: sticky; top: 0;">
                 <div class="card-header border-0 d-flex justify-content-center">
                     <div class="d-flex genome-title-box">
-                        <h3 class="genome-title">Genome</h3>
+                        <h3 class="genome-title">Genome:</h3>
                         <h3 id="genome-name">Maria</h3>
                     </div>
                 </div>
             </div>
+        </header>
+       
+        <button type="button"class="btn btn-success btn-floating btn-lg"id="btn-back-to-top"><i class="bi bi-arrow-bar-up"></i></button>
+        <section>
+            
+            <!-- Table -->
+            <div class="col">
+            
+            
 
             <div class="card" >
                 <a data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
@@ -82,7 +87,7 @@
             <div class="card" >
                 <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
                     <div class="card-header border-0 d-flex justify-content-between">
-                        <h3><i class="bi bi-capsule" style="color: #0137a3; width: 30px;"></i> Search by Drug</h3>
+                        <h3><i class="bi bi-capsule" style="color: #0137a3; width: 30px; margin-right: 10px;"></i> Search by Drug</h3>
                     </div>
                     <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
                         <input type="text">
@@ -132,6 +137,6 @@
     <div class="trapezio"></div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../js/secondpage.js"></script>
+    <script src="../js/thirdpage.js"></script>
     </body>
 </html>
