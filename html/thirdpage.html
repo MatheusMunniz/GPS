@@ -20,7 +20,8 @@
     <main>
         <nav class="navbar navbar-expand-lg navbar-dark bg-midblue ">
             <div class="container-fluid">
-                <a href="../index.html" class="navbar-brand"><img src="../src/WhiteLogoSimple.png" alt=""></a>
+                <a href="#" class="navbar-brand"><img src="../src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 10px; border-right: 1px solid white;"></a>
+                <a href="#" class="navbar-brand"><img src="../src/dunabioinfo.png" alt="" style="width: 75px;"></a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse7">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,12 +29,12 @@
                     <div class="navbar-nav">
                         <a href="#" class="nav-item nav-link"></a>
                     </div>
-                    <form class="d-flex ms-auto">
+                    <!-- <form class="d-flex ms-auto">
                         <input type="text" class="form-control me-sm-2" placeholder="Search by gene">
                         <button type="submit" class="btn btn-outline-light"><i class="bi bi-search"></i></button>
-                    </form>
+                    </form> -->
 
-                    <div class="profile">
+                    <div class="d-flex ms-auto profile">
                        <div class="btn-group">
                         <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../src/avatar.png" id="navbarAvatar" alt="">
@@ -56,351 +57,71 @@
         <section class="pt-5">
             <!-- Table -->
             <div class="col">
+            
             <div class="card">
-                <div class="card-header border-0 d-flex justify-content-between">
+                <div class="card-header border-0 d-flex justify-content-center">
                     <div class="d-flex genome-title-box">
                         <h3 class="genome-title">Genome</h3>
                         <h3 id="genome-name">Maria</h3>
                     </div>
                 </div>
-                <div class="table-responsive">
-                <table class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                    <tr>
-                        <th scope="col">Samples</th>
-                        <th scope="col">Gene</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Users with access</th>
-                        <th scope="col">Completion</th>
-                        <th scope="col"></th>
-                    </tr>
-                    </thead>
+            </div>
 
-                    <tbody>
-                    <tr>
-                        <th scope="row">
-                        <div class="media align-items-center">
-                            <a href="#" class="avatar rounded-circle mr-3">
-                            <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/bootstrap.jpg">
-                            </a>
-                            <div class="media-body">
-                            <span class="mb-0 text-sm">sample 1</span>
-                            </div>
-                        </div>
-                        </th>
-                        <td>
-                        
-                        </td>
-                        <td>
-                        <span class="badge badge-dot mr-4">
-                            <i class="bg-warning"></i> pending
-                        </span>
-                        </td>
-                        <td>
-                        <div class="avatar-group">
-                            <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 1">
-                            <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                            </a>
-                            <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 2">
-                            <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                            </a>
-                            <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 3">
-                            <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                            </a>
-                            <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 4">
-                            <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                            </a>
-                            
-                        </div>
-                        </td>
-                        <td>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2">60%</span>
-                            <div>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                            </div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="text-right">
-                        <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="row">Show all recomendations</th>
-                        
-                    </tr>
-                    <tr>
-                        <th class="row">Show Gene network</th>
-                        
-                    </tr>
+            <div class="card" >
+                <a data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
+                    <div class="card-header border-0 d-flex justify-content-between">
+                        <h3><img src="../src/geneIcon.png" alt="" style="width: 30px; color: #0137a3 !important;"> Search by Gene</h3>
+                    </div>
+                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample5">
+                        <input type="text">
+                    </div>
+                </a>
+                
+            </div>
 
-                    <!-- <tr>
-                        <th scope="row">
-                        <div class="media align-items-center">
-                            <a href="#" class="avatar rounded-circle mr-3">
-                            <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/angular.jpg">
-                            </a>
-                            <div class="media-body">
-                            <span class="mb-0 text-sm">Sample 2</span>
-                            </div>
-                        </div>
-                        </th>
-                        <td>
-                        
-                        </td>
-                        <td>
-                        <span class="badge badge-dot">
-                            <i class="bg-success"></i> completed
-                        </span>
-                        </td>
-                        <td>
-                            <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 1">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 2">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                            
-                                
-                            </div>
-                        </td>
-                        <td>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2">100%</span>
-                            <div>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                            </div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="text-right">
-                        <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                        <div class="media align-items-center">
-                            <a href="#" class="avatar rounded-circle mr-3">
-                            <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/sketch.jpg">
-                            </a>
-                            <div class="media-body">
-                            <span class="mb-0 text-sm">Sample 3</span>
-                            </div>
-                        </div>
-                        </th>
-                        <td>
-                        
-                        </td>
-                        <td>
-                        <span class="badge badge-dot mr-4">
-                            <i class="bg-danger"></i> delayed
-                        </span>
-                        </td>
-                        <td>
-                            <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 1">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 2">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 3">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                
-                                
-                            </div>
-                        </td>
-                        <td>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2">72%</span>
-                            <div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
-                            </div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="text-right">
-                        <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                        <div class="media align-items-center">
-                            <a href="#" class="avatar rounded-circle mr-3">
-                            <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/react.jpg">
-                            </a>
-                            <div class="media-body">
-                            <span class="mb-0 text-sm">Sample 4</span>
-                            </div>
-                        </div>
-                        </th>
-                        <td>
-                        
-                        </td>
-                        <td>
-                        <span class="badge badge-dot">
-                            <i class="bg-info"></i> on schedule
-                        </span>
-                        </td>
-                        <td>
-                            <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 1">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                            </div>
-                        </td>
-                        <td>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2">90%</span>
-                            <div>
-                            <div class="progress">
-                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                            </div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="text-right">
-                        <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                        <div class="media align-items-center">
-                            <a href="#" class="avatar rounded-circle mr-3">
-                            <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/vue.jpg">
-                            </a>
-                            <div class="media-body">
-                            <span class="mb-0 text-sm">Sample 5</span>
-                            </div>
-                        </div>
-                        </th>
-                        <td>
-                        
-                        </td>
-                        <td>
-                        <span class="badge badge-dot mr-4">
-                            <i class="bg-success"></i> completed
-                        </span>
-                        </td>
-                        <td>
-                            <div class="avatar-group">
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 1">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 2">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 3">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="user 4">
-                                <img alt="Image placeholder" src="../src/avatar.png" class="rounded-circle">
-                                </a>
-                                
-                            </div>
-                        </td>
-                        <td>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2">100%</span>
-                            <div>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                            </div>
-                            </div>
-                        </div>
-                        </td>
-                        <td class="text-right">
-                        <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                        </td>
-                    </tr> -->
-                    </tbody>
-                </table>
-                </div>
-                <div class="card-footer py-4">
-                <nav aria-label="...">
-                    <ul class="pagination justify-content-end mb-0">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">
-                        <i class="fas fa-angle-left"></i>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                        <i class="fas fa-angle-right"></i>
-                        <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                    </ul>
-                </nav>
-                </div>
+            <div class="card" >
+                <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
+                    <div class="card-header border-0 d-flex justify-content-between">
+                        <h3><i class="bi bi-capsule" style="color: #0137a3; width: 30px;"></i> Search by Drug</h3>
+                    </div>
+                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
+                        <input type="text">
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="card" >
+                <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
+                    <div class="card-header border-0 d-flex justify-content-between">
+                        <h3><img src="../src/diseaseIcon.png" alt="" style="width: 30px; color: #0137a3 !important;"> Search by Disease</h3>
+                    </div>
+                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample3">
+                        <input type="text">
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="card" >
+                <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
+                    <div class="card-header border-0 d-flex justify-content-between">
+                        <h3><img src="../src/networkIcon.png" alt="" style="width: 30px;"> Show Gene Network</h3>
+                    </div>
+                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample2">
+                        <img src="../src/GeneNetworkExample.png" alt="">
+                    </div>
+                </a>
+                
             </div>
 
             <div class="card" >
                 <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
                     <div class="card-header border-0 d-flex justify-content-between">
-                        <h3>Education</h3>
+                        <h3><img src="../src/mascot.png" alt="" style="width: 30px;"> Education</h3>
                     </div>
                     <div class="ratio ratio-16x9 collapse" id="collapseExample">
-                        <iframe src="https://www.bing.com/ck/a?!&&p=d3d828eca2c21eabJmltdHM9MTY4NTQ5MTIwMCZpZ3VpZD0xYTBiYTFlMS1hZjAwLTYxODctMjM4Yi1iMzA4YWU3OTYwZWEmaW5zaWQ9NTUyNQ&ptn=3&hsh=3&fclid=1a0ba1e1-af00-6187-238b-b308ae7960ea&u=a1L3ZpZGVvcy9zZWFyY2g_cT1nZW5vbWUrY2xhc3MreW91dHViZSZkb2NpZD02MDM1MjM0MTg1NzY0NzU2NzImbWlkPTFGRkVENUFERkUyNDAxNTZGNTcwMUZGRUQ1QURGRTI0MDE1NkY1NzAmdmlldz1kZXRhaWwmRk9STT1WSVJF&ntb=1" title="YouTube Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="760" height="570" allowfullscreen></iframe>
+                        <iframe src="https://www.bing.com/videos/search?q=genome+class&&view=detail&mid=1FFED5ADFE240156F5701FFED5ADFE240156F570&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dgenome%2Bclass%26FORM%3DHDRSC4" title="YouTube Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="760" height="570" allowfullscreen></iframe>
                     </div>
                 </a>
                 

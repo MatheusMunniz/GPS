@@ -16,3 +16,48 @@
     border-radius: 5px;
     background-color: #f1f1f1;
 }
+
+
+
+/* */
+
+.avatar {
+    font-size: 1rem;
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #adb5bd;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.avatar-sm {
+    font-size: .875rem;
+    width: 36px;
+    height: 36px;
+    transition: .3s;
+}
+
+.avatar-group .avatar {
+    position: relative;
+    z-index: 2;
+    border: 2px solid #fff;
+}
+
+.avatar-group .avatar:hover {
+    z-index: 3;
+    border:  2px solid #0137a3;
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-group .avatar + .avatar {
+    margin-left: -1rem;
+}

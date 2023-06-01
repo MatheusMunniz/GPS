@@ -4,12 +4,18 @@
     text-align: center;
 }
 .genome-title {
-    background: #0137a3;
+    background: #0ed700;
     padding: 2px 8px;
     border-radius: 3px;
     color: white;
     margin-right: 5px;
     
+}
+.card {
+    margin: 10px 0;
+}
+.card-header img {
+    margin-right: 10px;
 }
 
 #genome-name {
