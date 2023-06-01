@@ -2,18 +2,19 @@
 
 .genome-title-box {
     text-align: center;
+}
+.genome-title {
     background: #0137a3;
     padding: 2px 8px;
     border-radius: 3px;
     color: white;
     margin-right: 5px;
-}
-.genome-title {
     
 }
-.genome-title {
-    padding: 2px 0;
+
+#genome-name {
     letter-spacing: 2px;
+    padding: 2px 0;
 }
 
 :root {
