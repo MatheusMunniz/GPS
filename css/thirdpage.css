@@ -94,3 +94,12 @@ section .card {
         background: #f2f2f2;
     }
       
+
+/* Educational */
+#collapseExample5 {
+    height: 100%;
+}
+
+.embed-responsive {
+height: 100%;
+}

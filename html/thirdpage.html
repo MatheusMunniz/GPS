@@ -219,10 +219,10 @@
 
             <div class="card" >
               <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
-                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample3" role="button">
+                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample4" role="button">
                       <h3><i class="bi bi-clipboard2-heart-fill" style="color: #0137a3; width: 30px; margin-right: 10;"></i> Show all recomendations</h3>
                   </div>
-                  <div class="ratio ratio-16x9 collapse p-3" id="collapseExample3">
+                  <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
                       <input type="text">
                   </div>
               </a>
@@ -253,12 +253,52 @@
             </div>
 
             <div class="card" style="background-color: #0050c0;">
-                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none; background-image: url(../src/boxbackground.png);">
+                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none; background-image: url(../src/boxbackground.png); background-repeat: no-repeat; ">
                     <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample5" role="button">
                         <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 30px;"> Education</h3>
                     </div>
                     <div class="ratio ratio-16x9 collapse" id="collapseExample5">
-                        <iframe src="https://www.bing.com/videos/search?q=genome+class&&view=detail&mid=1FFED5ADFE240156F5701FFED5ADFE240156F570&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dgenome%2Bclass%26FORM%3DHDRSC4" title="YouTube Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="760" height="570" allowfullscreen></iframe>
+                      <div class="embed-responsive embed-responsive-16by9">
+                        
+                        <!-- ---- -->
+                        <div class="shadow-1-strong" style="background-color: rgb(32, 58, 162);">
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="ratio ratio-16x9">
+                                  <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/mcEV3m9SG9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      
+                          <div class="row g-0">
+                      
+                            <div class="col-lg-6 order-md-2">
+                              <div class="view position-relative">
+                                <div class="mask bg-black bg-opacity-50 d-flex align-items-center justify-content-center">
+                                  <a id="play" class="btn btn-floating btn-success btn-lg position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#modal1"><i class="bi bi-play-circle-fill"></i></a>
+                                </div>
+                                <img class="img-fluid" src="../src/thumbnail.png" alt="Video title">
+                              </div>
+                            </div>
+                      
+                            <div class="col-lg-6 mx-auto d-flex align-items-center text-white">
+                              <div class="px-4 py-4 py-lg-0">
+                                <h3 class="fw-normal mb-4">Genetics Basics | Chromosomes, Genes, DNA and Traits</h3>
+                                <p class="mb-0">The topic of Genetics is quite interesting, but for understanding it, we need to first know the Units of Heredity. What are these units? What are the Factors that carry information from one generation to the other? Chromatids? Chromosomes? Genes? DNA? Or all of these? Let us get to know that in this video!</p>
+                              </div>
+                            </div>
+                      
+                          </div>
+                          
+                        </div>
+                        <!-- ---- -->
+
+                      </div>
                     </div>
                 </a>
                 
