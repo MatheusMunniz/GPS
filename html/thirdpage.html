@@ -21,8 +21,7 @@
         <header class="">
             <nav class="navbar navbar-expand-lg navbar-dark bg-midblue">
                 <div class="container-fluid">
-                    <a href="#" class="navbar-brand"><img src="../src/WhiteLogoSimple.png" alt="" style="width: 70px; padding-right: 15px; border-right: 1px solid white;"></a>
-                    <a href="#" class="navbar-brand"><img src="../src/dunabioinfo.png" alt="" style="width: 75px;"></a>
+                    <a href="#" class="navbar-brand"><img src="../src/WhiteLogoSimple.png" alt=""></a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse7">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -30,11 +29,7 @@
                         <div class="navbar-nav">
                             <a href="#" class="nav-item nav-link"></a>
                         </div>
-                        <!-- <form class="d-flex ms-auto">
-                            <input type="text" class="form-control me-sm-2" placeholder="Search by gene">
-                            <button type="submit" class="btn btn-outline-light"><i class="bi bi-search"></i></button>
-                        </form> -->
-    
+                        
                         <div class="d-flex ms-auto profile">
                            <div class="btn-group">
                             <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,29 +65,140 @@
             <!-- Table -->
             <div class="col">
             
-            
-
-            <div class="card" >
-                <a  aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample5" role="button">
-                        <h3><img src="../src/geneIcon.png" alt="" style="width: 30px; color: #0137a3 !important;"> Search by Gene</h3>
+            <div class="card"> <!-- Genes -->
+                <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample1" role="button" style="cursor: pointer; text-decoration: none;">
+                    <h3 class="m-0">
+                        <img src="../src/geneIcon.png" alt="" style="width: 30px; color: #0137a3 !important;">
+                        <a class="text-decoration-none text-dark">Genes</a>
+                    </h3>
+                </div>
+                <div class="ratio ratio-16x9 collapse p-3" id="collapseExample1">
+                    <form class="d-flex ms-auto justify-content-center position-absolute" style="height: 40px; padding: 0 10px; z-index: 9999;">
+                        <input type="text" id="searchInput" class="form-control me-sm-2" placeholder="Search by gene">
+                    </form>
+                    <div id="gene-content" style="top: 45px;">
+                        <h5 id="genePesquisado" style="display: none;"></h5>
+                        <table id="gene-table">
+                          <tbody>
+                            <tr>
+                              <td><a href="#">ACTB</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 112839468"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">BRCA1</a></td>
+                              <td>
+                                <div class="barrinha barrinha-cinza">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr17 : 41196311"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">EGFR</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 55259515"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">TP53</a></td>
+                              <td>
+                                <div class="barrinha barrinha-cinza">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr17 : 7571738"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">MYC</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr8 : 128727615"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">PTEN</a></td>
+                              <td>
+                                <div class="barrinha barrinha-cinza">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr10 : 89627030"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">KRAS</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr12 : 25380275"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">BRAF</a></td>
+                              <td>
+                                <div class="barrinha barrinha-cinza">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 140753336"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">ESR1</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr6 : 152419569"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">FLT3</a></td>
+                              <td>
+                                <div class="barrinha barrinha-cinza">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr13 : 28608463"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">JAK2</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr9 : 50738440"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">RET</a></td>
+                              <td>
+                                <div class="barrinha barrinha-cinza">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr10 : 43608885"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#">MET</a></td>
+                              <td>
+                                <div class="barrinha barrinha-branco">
+                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 116411894"></div>
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- Adicione mais linhas para os outros genes -->
+                          </tbody>
+                        </table>
                     </div>
-                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample5">
-                        <form class="d-flex ms-auto justify-content-center" style="height: 50px; padding: 0 10px;">
-                            <input type="text" class="form-control me-sm-2" placeholder="Search by gene">
-                            <button type="submit" class="btn btn btn-secondary"><i class="bi bi-search"></i></button>
-                        </form>
-                    </div>
-                </a>
-                
+                </div>
             </div>
 
+           
+
             <div class="card" >
-                <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between">
-                        <h3><i class="bi bi-capsule" style="color: #0137a3; width: 30px; margin-right: 10px;"></i> Search by Drug</h3>
+                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
+                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample2" role="button">
+                        <h3><i class="bi bi-capsule" style="color: #0137a3; width: 30px; margin-right: 10;"></i> Drugs</h3>
                     </div>
-                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
+                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample2">
                         <input type="text">
                     </div>
                 </a>
@@ -100,9 +206,9 @@
             </div>
 
             <div class="card" >
-                <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between">
-                        <h3><img src="../src/diseaseIcon.png" alt="" style="width: 30px; color: #0137a3 !important;"> Search by Disease</h3>
+                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
+                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample3" role="button">
+                        <h3><img src="../src/diseaseIcon.png" alt="" style="width: 30px; color: #0137a3 !important;"> Disease</h3>
                     </div>
                     <div class="ratio ratio-16x9 collapse p-3" id="collapseExample3">
                         <input type="text">
@@ -112,23 +218,46 @@
             </div>
 
             <div class="card" >
-                <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between">
-                        <h3><img src="../src/networkIcon.png" alt="" style="width: 30px;"> Show Gene Network</h3>
-                    </div>
-                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample2">
-                        <img src="../src/GeneNetworkExample.png" alt="">
-                    </div>
-                </a>
-                
+              <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
+                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample3" role="button">
+                      <h3><i class="bi bi-clipboard2-heart-fill" style="color: #0137a3; width: 30px; margin-right: 10;"></i> Show all recomendations</h3>
+                  </div>
+                  <div class="ratio ratio-16x9 collapse p-3" id="collapseExample3">
+                      <input type="text">
+                  </div>
+              </a>
+              
             </div>
 
-            <div class="card" >
-                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between">
-                        <h3><img src="../src/mascot.png" alt="" style="width: 30px;"> Education</h3>
+            <div class="card"> <!-- Gene Network -->
+              <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample4" role="button" style="cursor: pointer; text-decoration: none;">
+                  <h3 class="m-0">
+                      <img src="../src/networkIcon.png" alt="" style="width: 30px; color: #0137a3 !important;">
+                      <a class="text-decoration-none text-dark">Show Gene Network</a>
+                  </h3>
+              </div>
+              <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
+                  <div id="network-content">
+                      <div class="p-2 d-flex justify-content-between" id="gene-network-header">
+                          <div>
+                              <button type="button" class="btn btn-primary ms-2" id="randomize-button">Randomize</button>
+                              <button type="button" class="btn btn-primary ms-2" id="reset-button">Reset</button>
+                              <button type="button" class="btn btn-primary ms-2" id="center-button">Center view</button>
+                          </div>
+                          <button type="button" class="btn btn-secondary ms-2" id="fullscreen-button"><i class="bi bi-fullscreen"></i></button>
+                      </div>
+                      
+                      <div id="network-container"></div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="card" style="background-color: #0050c0;">
+                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none; background-image: url(../src/boxbackground.png);">
+                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample5" role="button">
+                        <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 30px;"> Education</h3>
                     </div>
-                    <div class="ratio ratio-16x9 collapse" id="collapseExample">
+                    <div class="ratio ratio-16x9 collapse" id="collapseExample5">
                         <iframe src="https://www.bing.com/videos/search?q=genome+class&&view=detail&mid=1FFED5ADFE240156F5701FFED5ADFE240156F570&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dgenome%2Bclass%26FORM%3DHDRSC4" title="YouTube Video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="760" height="570" allowfullscreen></iframe>
                     </div>
                 </a>
@@ -138,8 +267,18 @@
         </section>
     </main>
     <div class="trapezio"></div>
+
+
+    <!-- Cytoscape -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.1/cytoscape.min.js"></script>
+    <script src="../js/cytoscape.js"></script>
+
+    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="../js/thirdpage.js"></script>
+
+
     </body>
 </html>

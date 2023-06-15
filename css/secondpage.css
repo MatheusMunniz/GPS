@@ -1,3 +1,37 @@
+/* mascot */
+#welcome-box {
+    padding: 10px;
+    align-items: center;
+    border-bottom: 2px #0137a3;
+}
+#welcome-box h2 {
+    line-height: 1;
+    padding: 5px 10px;
+    border-right: 5px solid #0137a3;
+    margin: 0;
+
+}
+#welcome-box #hello-box {
+    align-items: center;
+    gap: 10px;
+}
+#welcome-box #hello-txt {
+    color: #0137a3;
+    width: 100%;
+    padding: 10px 10px;
+    border-bottom: 4px solid #0137a3;
+}
+#welcome-box #hello-txt #user{
+    color: #05cc03;
+}
+#welcome-box #hello-box h1{
+    margin: 0;
+}
+#mascot {
+    width: 100px;
+}
+
+
 .samples li {
     transition: .3s;
 }
@@ -8,6 +42,7 @@
 }
 .samples li:hover label {
     color: white;
+    letter-spacing: 2px;
 }
 
 .expandable-section {
@@ -62,4 +97,36 @@
 
 .avatar-group .avatar + .avatar {
     margin-left: -1rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+
+/* MEDIA QUERY Celular*/
+@media (max-width: 650px) {
+    #welcome-box {
+        flex-direction: column;
+    }
+    #welcome-box h2 {
+        font-size: 1rem;
+        border-right: none;
+        letter-spacing: 2px;
+    }
+    #welcome-box #hello-txt {
+        width: initial;
+        border-bottom: none;
+    }
+    #welcome-box #hello-txt #user{
+        color: #05cc03;
+    }
+    #welcome-box #hello-box h1{
+        font-size: 2.2rem;
+    }
+    #mascot {
+        width: 90px;
+        margin-bottom: 10px;
+    }
 }

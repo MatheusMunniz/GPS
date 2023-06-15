@@ -1,0 +1,34 @@
+{
+  "relativePlacementConstraint": [
+    {
+      "left": "r1",
+      "right": "r2",
+      "gap": 100
+    },
+    {
+      "top": "r1",
+      "bottom": "r2",
+      "gap": 100
+    },
+    {
+      "left": "r2",
+      "right": "r3",
+      "gap": 200
+    },
+    {
+      "top": "r4",
+      "bottom": "r5",
+      "gap": 150
+    },
+    {
+      "left": "r6",
+      "right": "r7",
+      "gap": 150
+    },
+    {
+      "top": "r8",
+      "bottom": "r7",
+      "gap": 100
+    }
+  ]
+}
