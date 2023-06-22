@@ -65,244 +65,313 @@
             <!-- Table -->
             <div class="col">
             
-            <div class="card"> <!-- Genes -->
-                <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample1" role="button" style="cursor: pointer; text-decoration: none;">
-                    <h3 class="m-0">
-                        <img src="../src/geneIcon.png" alt="" style="width: 30px; color: #0137a3 !important;">
-                        <a class="text-decoration-none text-dark">Genes</a>
-                    </h3>
-                </div>
-                <div class="ratio ratio-16x9 collapse p-3" id="collapseExample1">
-                    <form class="d-flex ms-auto justify-content-center position-absolute" style="height: 40px; padding: 0 10px; z-index: 9999;">
-                        <input type="text" id="searchInput" class="form-control me-sm-2" placeholder="Search by gene">
-                    </form>
-                    <div id="gene-content" style="top: 45px;">
-                        <h5 id="genePesquisado" style="display: none;"></h5>
-                        <table id="gene-table">
-                          <tbody>
-                            <tr>
-                              <td><a href="#">ACTB</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 112839468"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">BRCA1</a></td>
-                              <td>
-                                <div class="barrinha barrinha-cinza">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr17 : 41196311"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">EGFR</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 55259515"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">TP53</a></td>
-                              <td>
-                                <div class="barrinha barrinha-cinza">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr17 : 7571738"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">MYC</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr8 : 128727615"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">PTEN</a></td>
-                              <td>
-                                <div class="barrinha barrinha-cinza">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr10 : 89627030"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">KRAS</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr12 : 25380275"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">BRAF</a></td>
-                              <td>
-                                <div class="barrinha barrinha-cinza">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 140753336"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">ESR1</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr6 : 152419569"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">FLT3</a></td>
-                              <td>
-                                <div class="barrinha barrinha-cinza">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr13 : 28608463"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">JAK2</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr9 : 50738440"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">RET</a></td>
-                              <td>
-                                <div class="barrinha barrinha-cinza">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr10 : 43608885"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href="#">MET</a></td>
-                              <td>
-                                <div class="barrinha barrinha-branco">
-                                  <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 116411894"></div>
-                                </div>
-                              </td>
-                            </tr>
-                            <!-- Adicione mais linhas para os outros genes -->
-                          </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+              <div class="card"> <!-- Genes -->
+                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample1" role="button" style="cursor: pointer; text-decoration: none;">
+                      <h3 class="m-0">
+                          <img src="../src/geneIcon.png" alt="" style="width: 30px; color: #0137a3 !important;">
+                          <a class="text-decoration-none text-dark">Search by Gene</a>
+                      </h3>
+                  </div>
+                  <div class="ratio ratio-16x9 collapse p-3" id="collapseExample1">
+                      <form class="d-flex ms-auto justify-content-center position-absolute" style="height: 40px; padding: 0 10px; z-index: 9999;">
+                          <input type="text" id="searchInput" class="form-control me-sm-2" placeholder="Search by gene">
+                      </form>
+                      <div id="gene-content" style="top: 45px;">
+                          <h5 id="genePesquisado" style="display: none;"></h5>
+                          <table id="gene-table">
+                            <tbody>
+                              <tr>
+                                <td><a href="#">ACTB</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 112839468"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">BRCA1</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-cinza">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr17 : 41196311"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">EGFR</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 55259515"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">TP53</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-cinza">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr17 : 7571738"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">MYC</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr8 : 128727615"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">PTEN</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-cinza">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr10 : 89627030"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">KRAS</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr12 : 25380275"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">BRAF</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-cinza">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 140753336"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">ESR1</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr6 : 152419569"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">FLT3</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-cinza">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr13 : 28608463"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">JAK2</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr9 : 50738440"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">RET</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-cinza">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr10 : 43608885"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><a href="#">MET</a></td>
+                                <td>
+                                  <div class="barrinha barrinha-branco">
+                                    <div class="gene-location" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="chr7 : 116411894"></div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <!-- Adicione mais linhas para os outros genes -->
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
 
-           
-
-            <div class="card" >
-                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample2" role="button">
-                        <h3><i class="bi bi-capsule" style="color: #0137a3; width: 30px; margin-right: 10;"></i> Drugs</h3>
-                    </div>
-                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample2">
-                        <input type="text">
-                    </div>
-                </a>
+              <div class="d-flex justify-content-center">  <!-- Drugs & Recomendations -->
                 
-            </div>
-
-            <div class="card" >
-                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
-                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample3" role="button">
-                        <h3><img src="../src/diseaseIcon.png" alt="" style="width: 30px; color: #0137a3 !important;"> Disease</h3>
-                    </div>
-                    <div class="ratio ratio-16x9 collapse p-3" id="collapseExample3">
-                        <input type="text">
-                    </div>
-                </a>
+                <div class="card w-100 me-2">  <!-- Drugs -->
+                  <a aria-expanded="false" aria-controls="collapseExample2"  style="text-decoration: none;">
+                      <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample2" role="button">
+                          <h3>
+                            <i class="bi bi-capsule" style="color: #0137a3; width: 30px; padding-right: 10px;"></i>
+                            Drugs
+                          </h3>
+                      </div>
+                      <div class="ratio ratio-16x9 collapse p-3" id="collapseExample2">
+                      </div>
+                  </a>
+                  
+                </div>
                 
-            </div>
+                <div class="card w-100">  <!-- Recomendations -->
+                  <a aria-expanded="false" aria-controls="collapseExample3"  style="text-decoration: none;">
+                      <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample3" role="button">
+                          <h3>
+                            <i class="bi bi-clipboard2-heart-fill" style="color: #0137a3; width: 30px; padding-right: 10px;"></i>
+                            Recomendations
+                          </h3>
+                      </div>
+                      <div class="ratio ratio-16x9 collapse p-3" id="collapseExample3">
+                      </div>
+                  </a>
+                  
+                </div>
 
-            <div class="card" >
-              <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none;">
-                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample4" role="button">
-                      <h3><i class="bi bi-clipboard2-heart-fill" style="color: #0137a3; width: 30px; margin-right: 10;"></i> Show all recomendations</h3>
+              </div>
+
+              <div class="d-flex justify-content-center">  <!-- Disease & Risk scores -->
+                
+                <div class="card w-100 me-2"> <!-- Disease -->
+                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample4" role="button" style="cursor: pointer; text-decoration: none;">
+                      <h3 class="m-0">
+                        <img src="../src/diseaseIcon.png" alt="" style="width: 25px; color: #0137a3 !important;">
+                        <a class="text-decoration-none text-dark">Disease</a>
+                      </h3>
                   </div>
                   <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
-                      <input type="text">
+  
                   </div>
-              </a>
-              
-            </div>
-
-            <div class="card"> <!-- Gene Network -->
-              <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample4" role="button" style="cursor: pointer; text-decoration: none;">
-                  <h3 class="m-0">
-                      <img src="../src/networkIcon.png" alt="" style="width: 30px; color: #0137a3 !important;">
-                      <a class="text-decoration-none text-dark">Show Gene Network</a>
-                  </h3>
-              </div>
-              <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
-                  <div id="network-content">
-                      <div class="p-2 d-flex justify-content-between" id="gene-network-header">
-                          <div>
-                              <button type="button" class="btn btn-primary ms-2" id="randomize-button">Randomize</button>
-                              <button type="button" class="btn btn-primary ms-2" id="reset-button">Reset</button>
-                              <button type="button" class="btn btn-primary ms-2" id="center-button">Center view</button>
-                          </div>
-                          <button type="button" class="btn btn-secondary ms-2" id="fullscreen-button"><i class="bi bi-fullscreen"></i></button>
-                      </div>
-                      
-                      <div id="network-container"></div>
-                  </div>
-              </div>
-            </div>
-
-            <div class="card" style="background-color: #0050c0;">
-                <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none; background-image: url(../src/boxbackground.png); background-repeat: no-repeat; ">
-                    <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample5" role="button">
-                        <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 30px;"> Education</h3>
-                    </div>
-                    <div class="ratio ratio-16x9 collapse" id="collapseExample5">
-                      <div class="embed-responsive embed-responsive-16by9">
-                        
-                        <!-- ---- -->
-                        <div class="shadow-1-strong" style="background-color: rgb(32, 58, 162);">
-
-                          <!-- Modal -->
-                          <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                              <div class="modal-content">
-                                <div class="ratio ratio-16x9">
-                                  <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/mcEV3m9SG9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      
-                          <div class="row g-0">
-                      
-                            <div class="col-lg-6 order-md-2">
-                              <div class="view position-relative">
-                                <div class="mask bg-black bg-opacity-50 d-flex align-items-center justify-content-center">
-                                  <a id="play" class="btn btn-floating btn-success btn-lg position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#modal1"><i class="bi bi-play-circle-fill"></i></a>
-                                </div>
-                                <img class="img-fluid" src="../src/thumbnail.png" alt="Video title">
-                              </div>
-                            </div>
-                      
-                            <div class="col-lg-6 mx-auto d-flex align-items-center text-white">
-                              <div class="px-4 py-4 py-lg-0">
-                                <h3 class="fw-normal mb-4">Genetics Basics | Chromosomes, Genes, DNA and Traits</h3>
-                                <p class="mb-0">The topic of Genetics is quite interesting, but for understanding it, we need to first know the Units of Heredity. What are these units? What are the Factors that carry information from one generation to the other? Chromatids? Chromosomes? Genes? DNA? Or all of these? Let us get to know that in this video!</p>
-                              </div>
-                            </div>
-                      
-                          </div>
-                          
-                        </div>
-                        <!-- ---- -->
-
-                      </div>
-                    </div>
-                </a>
+                </div>
                 
-            </div>
+                <div class="card w-100"> <!-- Risk escores -->
+                  <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample4" role="button" style="cursor: pointer; text-decoration: none;">
+                      <h3 class="m-0">
+                        <i class="bi bi-activity" style="width: 25px; padding-right: 10px; color: #0137a3 !important;"></i>
+                        <a class="text-decoration-none text-dark">Risk scores</a>
+                      </h3>
+                  </div>
+                  <div class="ratio ratio-16x9 collapse p-3" id="collapseExample4">
+                    
+                    <div class="d-flex text-center" style="color: white;">
+                      <div class="w-100">
+                        <div class="bg-success">ABC (Age, Biomarkers, Clinical history) Risk Model</div>
+                      </div>
+                    </div>
+
+                    <div class="container-fluid" style="margin-top: 30px;">
+                      
+                      <div class="row custom-row">
+                        <div class="col-md-4 row-content">
+                          <div class="bg-light">Profile</div>
+                          <img class="profileimg" src="../src/thirdpage/profile.png" alt="">
+                        </div>
+                        <div class="col-md-4 row-content">
+                          <div class="bg-light ">Risk indicators</div>
+                          <div class="d-flex flex-column overflow-scroll">
+                            <p>PAD</p>
+                            <p>hs-cTnT</p>
+                            <p>NT-proBNP</p>
+                            
+                           
+                          </div>
+                        </div>
+                        <div class="col-md-4 row-content">
+                          <div class="bg-light ">Risk Factors</div>
+                          <div class="d-flex flex-column overflow-scroll">
+                            <p>Smoking</p>
+                            <p>Diabetes</p>
+                            <p>Age</p>
+                            
+                           
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row custom-row">
+                        <div class="col-md-6 row-content">
+                          <div class="bg-light ">Predicted Lifetime risk of cancer</div>
+                          <img class=" overflow-scroll" src="../src/thirdpage/cancerprediction.png" alt="">
+                        </div>
+                        <div class="col-md-6 row-content">
+                          <div class="bg-light ">Study Population</div>
+                          <img class="w-100" src="../src/thirdpage/study population.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="card"> <!-- Gene Network -->
+                <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample5" role="button" style="cursor: pointer; text-decoration: none;">
+                    <h3 class="m-0">
+                        <img src="../src/networkIcon.png" alt="" style="width: 30px; color: #0137a3 !important;">
+                        <a class="text-decoration-none text-dark">Gene Network</a>
+                    </h3>
+                </div>
+                <div class="ratio ratio-16x9 collapse p-3" id="collapseExample5">
+                    <div id="network-content">
+                        <div class="p-2 d-flex justify-content-between" id="gene-network-header">
+                            <div>
+                                <button type="button" class="btn btn-primary ms-2" id="randomize-button">Randomize</button>
+                                <button type="button" class="btn btn-primary ms-2" id="reset-button">Reset</button>
+                                <button type="button" class="btn btn-primary ms-2" id="center-button">Center view</button>
+                            </div>
+                            <button type="button" class="btn btn-secondary ms-2" id="fullscreen-button"><i class="bi bi-fullscreen"></i></button>
+                        </div>
+                        
+                        <div id="network-container"></div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="card" style="background-color: #0050c0;"> <!-- Education -->
+                  <a aria-expanded="false" aria-controls="collapseExample"  style="text-decoration: none; background-image: url(../src/boxbackground.png); background-repeat: no-repeat; ">
+                      <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample6" role="button">
+                          <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 30px;"> Education</h3>
+                      </div>
+                      <div class="ratio ratio-16x9 collapse" id="collapseExample6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                          
+                          <!-- ---- -->
+                          <div class="shadow-1-strong" style="background-color: rgb(32, 58, 162);">
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                              aria-hidden="true">
+                              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                  <div class="ratio ratio-16x9">
+                                    <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/mcEV3m9SG9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        
+                            <div class="row g-0">
+                        
+                              <div class="col-lg-6 order-md-2">
+                                <div class="view position-relative">
+                                  <div class="mask bg-black bg-opacity-50 d-flex align-items-center justify-content-center">
+                                    <a id="play" class="btn btn-floating btn-success btn-lg position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#modal1"><i class="bi bi-play-circle-fill"></i></a>
+                                  </div>
+                                  <img class="img-fluid" src="../src/thumbnail.png" alt="Video title">
+                                </div>
+                              </div>
+                        
+                              <div class="col-lg-6 mx-auto d-flex align-items-center text-white">
+                                <div class="px-4 py-4 py-lg-0">
+                                  <h3 class="fw-normal mb-4">Genetics Basics | Chromosomes, Genes, DNA and Traits</h3>
+                                  <p class="mb-0">The topic of Genetics is quite interesting, but for understanding it, we need to first know the Units of Heredity. What are these units? What are the Factors that carry information from one generation to the other? Chromatids? Chromosomes? Genes? DNA? Or all of these? Let us get to know that in this video!</p>
+                                </div>
+                              </div>
+                        
+                            </div>
+                            
+                          </div>
+                          <!-- ---- -->
+
+                        </div>
+                      </div>
+                  </a>
+                  
+              </div>
+
             </div>
         </section>
     </main>
