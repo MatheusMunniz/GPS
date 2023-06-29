@@ -16,6 +16,12 @@ header .card {
 section .card {
     margin: 10px 0;
 }
+.card-header {
+    transition: .3s;
+}
+.card-header:hover {
+    background: #adffa8;
+}
 .card-header img {
     margin-right: 10px;
 }
@@ -103,15 +109,43 @@ section .card {
 .embed-responsive {
 height: 100%;
 }
-
+.videos-relacionados {
+    margin-top: 10px !important;
+}
+.videos-relacionados img{
+    filter: brightness(.7);
+    transition: .3s;
+}
+.videos-relacionados img:hover {
+    filter: brightness(1);
+    border: 4px solid #0137a3;
+}
 
 /* Risk scores */
+
+
+
+
 
 .custom-row {
     height: 40%; /* Define a altura de cada linha como 1/3 da altura da janela */
     /* margin-bottom: 5px;  Adiciona um espaçamento de 10 pixels entre as linhas */
 }
-
+    .risk-score-title {
+        background-color: #a8ffa2;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+    .row-content {
+        height: 100%;
+    }
+    .row-content {
+        height: 100%;
+    }
+    .row-content ul {
+        
+    }
 .profileimg {
     padding: 5px;
     height: 150px;

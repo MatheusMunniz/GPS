@@ -107,6 +107,11 @@ function mostrarTodasLinhas() {
 }
 
 
+
+
+// Risk Score
+
+
 // Educational
 
 $('#play').on('click', function (e) {
