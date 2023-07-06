@@ -111,6 +111,25 @@ function mostrarTodasLinhas() {
 
 // Risk Score
 
+// Obtém as referências dos elementos HTML
+const sexElement = document.getElementById('sex');
+const ageElement = document.getElementById('age');
+const personImageElement = document.getElementById('person-image');
+
+// Define os valores para sexo e idade
+const sex = 'Male';
+const age = '30 anos';
+
+// Atualiza o conteúdo dos elementos HTML
+sexElement.textContent = sex;
+ageElement.textContent = age;
+
+// Define a imagem com base no sexo
+if (sex === 'Male') {
+  personImageElement.src = '../src/male-icon.png';
+} else if (sex === 'Female') {
+  personImageElement.src = '../src/female-icon.png';
+}
 
 // Educational
 

@@ -122,7 +122,38 @@ height: 100%;
 }
 
 /* Risk scores */
+.info-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
+  /* Estilize a imagem e o texto */
+  .info-box img {
+    width: 80px;
+    height: 150px;
+    margin: 5px 10px 5px 10px;
+  }
+
+  .info-box ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-box li {
+    display: flex;
+    margin-top: 3px;
+    background: rgb(177, 255, 255);
+    border-radius: 4px;
+    padding: 0 5px;
+  }
+  .info-box li span{
+    margin-left: 5px;
+  }
 
 
 
