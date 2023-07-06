@@ -27,33 +27,6 @@ function backToTop() {
 
 // SEARCH BY GENE
 
-//Location bar
-
-function posicionarGeneLocation(element) {
-  var valor = element.dataset.bsOriginalTitle; // Obtém o valor do atributo 'data-bs-original-title'
-  var margemEsquerda = Math.floor(Math.random() * 141); // Números aleatórios entre 0 e 140
-  element.style.marginLeft = margemEsquerda + 'px';
-  element.setAttribute('title', `Position = ${valor}`);
-}
-
-var geneLocations = document.querySelectorAll('.barrinha > .gene-location');
-
-geneLocations.forEach(function (geneLocation, index) {
-  if (index % 2 === 0) {
-    geneLocation.classList.add('barrinha-cinza');
-  } else {
-    geneLocation.classList.add('barrinha-branco');
-  }
-});
-
-var geneLocations = document.querySelectorAll('.gene-location');
-geneLocations.forEach(function(element) {
-  posicionarGeneLocation(element);
-  var tooltip = new bootstrap.Tooltip(element);
-});
-
-
-
 // Obter o elemento do campo de pesquisa
 var searchInput = document.getElementById("searchInput");
 
@@ -117,7 +90,7 @@ const ageElement = document.getElementById('age');
 const personImageElement = document.getElementById('person-image');
 
 // Define os valores para sexo e idade
-const sex = 'Male';
+const sex = 'Female';
 const age = '30 anos';
 
 // Atualiza o conteúdo dos elementos HTML

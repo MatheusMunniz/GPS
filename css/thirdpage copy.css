@@ -1,0 +1,225 @@
+header .card {
+    background: #0ed700;
+}
+.genome-title-box {
+    height: 35px;
+    padding: 5px;
+    text-align: center;
+}
+.genome-title-box h3{
+    font-size: 20px;
+}
+.genome-title {
+    margin-right: 5px;
+    color: white;
+}
+
+/* Cards */
+.genome-grid {
+    padding: 10px;
+  }
+    .genome-card {
+        margin-bottom: 10px;
+    }
+    .genome-card .card-header {
+        z-index: 10;
+        display: flex;
+        padding: 5px 10px;
+        background: rgb(206, 247, 255);
+    }
+      .genome-card .btn-link {
+        width: 100%;
+        text-decoration: none;
+        background: white;
+        text-align: start;
+        transition: .3s;
+      }
+      .genome-card .card-header:hover  {
+        background: linear-gradient(to right, rgb(84, 255, 106), white, white);
+      }
+      .genome-card .card-header:hover .btn-link {
+        width: 100%;
+        text-decoration: none;
+        background: linear-gradient(to right, white, white, rgb(84, 255, 106));
+        text-align: start;
+      }
+        .genome-card .btn h2 {
+            color: #0137a3;
+            transition: .3s;
+        }
+        .genome-card .btn:hover h2 {
+            letter-spacing: 2px;
+        }
+
+/* Gene */
+#gene-content {
+    padding: 10px;
+}
+
+    #gene-content h5 {
+        border-bottom: 1px solid gray;
+        padding-bottom: 5px;
+    }
+    #gene-table {
+        width: 100%;
+    }
+        #gene-table tr {
+            height: 30px;
+        }
+        #gene-table tr:nth-child(even) {
+            background-color: transparent;
+        }
+        #gene-table tr:nth-child(odd) {
+            background-color: #f3f3f3;
+        }
+        #gene-table td {
+            width: 100%;
+            padding: 0px 5px;
+        }
+            #gene-table td a{
+                color: #31b7ef;
+                cursor: pointer;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+            #gene-table td a:hover{
+                color: #31b7ef;
+                opacity: .8;
+            }
+            .barrinha {
+                width: 150px;
+                height: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid gray;
+            }
+            .barrinha-branco {
+                background-color: white;
+            }
+              
+            .barrinha-cinza {
+            background-color: #f3f3f3;
+            }
+              
+              .gene-location {
+                margin-left: 140px;
+                width: 10px;
+                height: 100%;
+                background-color: black;
+                position: relative;
+                cursor: pointer;
+            }
+
+
+
+
+/* Gene network */
+#network-container {
+    width: 100%;
+    height: 100%;
+}
+    #gene-network-header {
+        padding: 15px 10px !important;
+        background: #dddddd;
+    }
+      
+
+/* Risk Scores */
+.info-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-box img {
+    width: 100px;
+    height: 200px;
+    margin: 5px 10px 5px 10px;
+  }
+
+  .info-box ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-box li {
+    display: flex;
+    margin-top: 3px;
+    background: rgb(206, 247, 255);
+    border-radius: 4px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+  }
+  .info-box li span{
+    margin-left: 5px;
+  }
+  /* Chart js */
+  .chart-container {
+    width: 50%;
+    height: 300px;
+  }
+  .chart-container canvas {
+    margin: 15px;
+  }
+  .pgs-traits {
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+  }
+
+.custom-row {
+    height: 40%; /* Define a altura de cada linha como 1/3 da altura da janela */
+    /* margin-bottom: 5px;  Adiciona um espaçamento de 10 pixels entre as linhas */
+}
+    .risk-score-title {
+        background-color: #a8ffa2;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+    .row-content {
+        height: 100%;
+    }
+    .row-content {
+        height: 100%;
+    }
+    .row-content ul {
+        
+    }
+.profileimg {
+    padding: 5px;
+    height: 150px;
+}
+
+/* Educational */
+.education-card .card-header {
+    transition: .3s;
+}
+.education-card:hover {
+    border-top: 10px solid #0ed700;
+}
+.education-card .card-header:hover {
+    padding: 20px 15px;
+}
+.education-card #collapseExample5 {
+    height: 100%;
+}
+.education-card .embed-responsive {
+height: 100%;
+}
+.education-card.videos-relacionados {
+    margin-top: 10px !important;
+}
+.education-card .videos-relacionados img{
+    filter: brightness(.7);
+    transition: .3s;
+}
+.education-card .videos-relacionados img:hover {
+    filter: brightness(1);
+    border: 4px solid #0137a3;
+}
