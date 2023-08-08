@@ -27,6 +27,33 @@ function backToTop() {
 
 // SEARCH BY GENE
 
+//Location bar
+
+function posicionarGeneLocation(element) {
+  var valor = element.dataset.bsOriginalTitle; // Obtém o valor do atributo 'data-bs-original-title'
+  var margemEsquerda = Math.floor(Math.random() * 141); // Números aleatórios entre 0 e 140
+  element.style.marginLeft = margemEsquerda + 'px';
+  element.setAttribute('title', `Position = ${valor}`);
+}
+
+var geneLocations = document.querySelectorAll('.barrinha > .gene-location');
+
+geneLocations.forEach(function (geneLocation, index) {
+  if (index % 2 === 0) {
+    geneLocation.classList.add('barrinha-cinza');
+  } else {
+    geneLocation.classList.add('barrinha-branco');
+  }
+});
+
+var geneLocations = document.querySelectorAll('.gene-location');
+geneLocations.forEach(function(element) {
+  posicionarGeneLocation(element);
+  var tooltip = new bootstrap.Tooltip(element);
+});
+
+
+
 // Obter o elemento do campo de pesquisa
 var searchInput = document.getElementById("searchInput");
 
@@ -80,30 +107,6 @@ function mostrarTodasLinhas() {
 }
 
 
-
-
-// Risk Score
-
-// Obtém as referências dos elementos HTML
-const sexElement = document.getElementById('sex');
-const ageElement = document.getElementById('age');
-const personImageElement = document.getElementById('person-image');
-
-// Define os valores para sexo e idade
-const sex = 'Female';
-const age = '30 anos';
-
-// Atualiza o conteúdo dos elementos HTML
-sexElement.textContent = sex;
-ageElement.textContent = age;
-
-// Define a imagem com base no sexo
-if (sex === 'Male') {
-  personImageElement.src = '../src/male-icon.png';
-} else if (sex === 'Female') {
-  personImageElement.src = '../src/female-icon.png';
-}
-
 // Educational
 
 $('#play').on('click', function (e) {
@@ -115,3 +118,20 @@ $('#play').on('click', function (e) {
 $('#modal1').on('hidden.bs.modal', function (e) {
   $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
 });
+
+
+
+// CHAT
+
+function toggleChatBox() {
+  const chatBox = document.getElementById("chatBox");
+  const chatTab = document.querySelector(".chat-tab");
+
+  if (chatBox.classList.contains("chat-open")) {
+    chatBox.classList.remove("chat-open");
+    chatTab.classList.remove("chat-closed");
+  } else {
+    chatBox.classList.add("chat-open");
+    chatTab.classList.add("chat-closed");
+  }
+}

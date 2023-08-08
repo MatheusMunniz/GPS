@@ -17,7 +17,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Chart.js  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <!-- JSCharting -->
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>  
+    <script type="text/javascript" src="../jsc/jscharting.js"></script>
+    <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+    
     <title>GPS</title>
   </head>
 
@@ -65,6 +69,23 @@
         </header>
        
         <button type="button"class="btn btn-success btn-floating btn-lg"id="btn-back-to-top"><i class="bi bi-arrow-bar-up"></i></button>
+
+        <div class="chat-tab" onclick="toggleChatBox()">
+          <img id="mascot" src="../src/mrdnawelcome.png" alt="">
+        </div>
+        <div class="chat-box" id="chatBox">
+          <div class="chat-header">
+            <button class="close-btn" onclick="toggleChatBox()">&times;</button>
+          </div>
+          <div class="chat-body">
+            <!-- Aqui você pode adicionar o conteúdo do chat -->
+            <p>Hi! I'm Mr.DNA and i will be your virtual assistant inside the GPS</p>
+          </div>
+          <div class="d-flex w-100 " style="padding: 10px; transform: translateY(170px);">
+            <input type="text" placeholder="Ask me a question" style="padding: 0 10px; width: 100%; height: 30px;">
+          </div>
+          
+        </div>
         <section>
           <div class="genome-grid">
 
@@ -278,7 +299,7 @@
                 </button>
                 <div style="width: fit-content">
                   <form class="d-flex ms-auto" style="height: 100%;">
-                    <input type="text" class="form-control me-sm-2" placeholder="Trait category">
+                    <input type="text" class="form-control me-sm-2" placeholder="Browse">
                     <button type="submit" class="btn btn-primary" style="width: 50px;"><i class="bi bi-search"></i></button>
                   </form>
                 </div>
@@ -289,25 +310,36 @@
                   
                   <!-- ------ -->
                   <div class="pgs-traits">
-                    <div class="chart-container">
-                      <canvas class="line-chart"></canvas>
+                    <h3 class="pgs-traits-title" style="width: 100%;">View PGS by Trait Category</h3>
+                    <div class="chart-container d-flex justify-content-center">
+                      <canvas class="line-chart" width="100" height="1000"></canvas>
                     </div>
-                    <div>
-                      <h2>Polygenic Scores (PGS)</h2>
-                      <ul>
-                        <li>Biological process</li>
-                        <li>Cancer</li>
-                        <li>Cardiovascular disease</li>
-                        <li>Digestive system disorder</li>
-                        <li>Metabolic disorder</li>
-                        <li>Other disease</li>
-                      </ul>
+                    <div class="polygenic-scores">
+                      <h2>Categories</h2>
+                      <div class="d-flex" style="height: 200px; overflow-y: scroll;">
+                        <ul  id="categories">
+                          <li>Cancer<div>164 PGS</div></li>
+                          <li>Biological process<div>35 PGS</div></li>
+                          <li>Cardiovascular disease <div>612 PGS</div></li>
+                          <li>Digestive system disorder <div>195 PGS</div></li>
+                          <li>Metabolic disorder <div>43 PGS</div></li>
+                          <li>Other disease <div>271 PGS</div></li>
+                        </ul>
+                        <ul  id="traits">
+                          <li>brain cancer <div>1 PGS</div></li>
+                          <li>benign colon neoplasm <div>3 PGS</div></li>
+                          <li>colorectal cancer <div>2 PGS</div></li>
+                          <li>cirrhosis of liver <div>4 PGS</div></li>
+                          <li>basal cell carcinoma <div>3 PGS</div></li>
+                          <li>cronchus cancer <div>4 PGS</div></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   
                   <div class="d-flex text-center flex-column">
-                    <div class="w-100" style="color: white; font-weight: bold; padding: 10px !important;">
-                      <div class="bg-success">ABC (Age, Biomarkers, Clinical history) Risk Model</div>
+                    <div class="w-100" style="font-weight: bold; padding: 15px 10px !important;">
+                      <div style="background-color: rgb(206, 247, 255); padding: 5px 10px !important">Polygenic Scores</div>
                     </div>
                   </div>
 
@@ -328,15 +360,59 @@
                         </div>
                       </div>
 
-                      <div class="col-md-6 row-content">
-                        <div class="risk-score-title">Risk indicators</div>
-                        <div class="d-flex flex-column scroll">
+                      <div class="col-md-6 row-content" style="height: 244px;">
+                        <div class="risk-score-title">SNP Effect size</div>
+                        <div class="risk-indicators-content scroll" style="height: 244px;">
 
-                          <ul>
-                            <li>PAD</li>
-                            <li>hs-cTnT</li>
-                            <li>NT-proBNP</li>
-                          </ul>
+                          <table style="width: 100%;">
+                            <thead>
+                              <th>gene</th>
+                              <th>SNP</th>
+                              <th>Effect size</th>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>BRCA1</td>
+                                <td>rs1799950</td>
+                                <td>0.35</td>
+                              </tr>
+                              <tr>
+                                <td>TP53</td>
+                                <td>rs1042522</td>
+                                <td>-0.27</td>
+                              </tr>
+                              <tr>
+                                <td>APOE</td>
+                                <td>rs429358</td>
+                                <td>0.18</td>
+                              </tr>
+                              <tr>
+                                <td>IL6</td>
+                                <td>rs1800795</td>
+                                <td>0.21</td>
+                              </tr>
+                              <tr>
+                                <td>TP53</td>
+                                <td>rs1042522</td>
+                                <td>-0.27</td>
+                              </tr>
+                              <tr>
+                                <td>APOE</td>
+                                <td>rs429358</td>
+                                <td>0.18</td>
+                              </tr>
+                              <tr>
+                                <td>IL6</td>
+                                <td>rs1800795</td>
+                                <td>0.21</td>
+                              </tr>
+                              <tr>
+                                <td>MTHFR</td>
+                                <td>rs1801133</td>
+                                <td>-0.12</td>
+                              </tr>
+                            </tbody>
+                          </table>
 
                         </div>
                       </div>
@@ -345,12 +421,34 @@
 
                     <div class="row custom-row">
                       <div class="col-md-6 row-content">
-                        <div class="risk-score-title">SNP Effect size</div>
-                
-                      </div>
-                      <div class="col-md-6 row-content">
                         <div class="risk-score-title">Study Population</div>
-                        <img class="w-100" src="../src/thirdpage/study population.png" alt="">
+                        <div style="display: flex; justify-content: center; height: 435px;">
+                          <div id="study_pop_chart" style="max-width: 740px;height: 430px;margin-top: 40px"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 row-content" style="margin-top: 40px;">
+                          <div class="risk_score_chart_container">
+
+                            <div style="z-index: 2; padding: 20px;">
+
+                              <div class="risk_score_chart_texts">
+                                <p>Decreased risk of liver cirrhosis based on</p>
+                                <h2 id='variants_number'>253,330</h2>
+                                <p> variants we looked at.</p>
+                              </div>
+                              <div id="labelsWrapper">
+
+                                <div id="iconsDiv" style="width: 380px; height: 30px;"></div>
+                                <div id="labelDiv" style="margin-top: 10px; width: 380px; height: 130px;"></div>
+                          
+                              </div>
+
+                            </div>
+                            
+                            <div id="chartDiv" style="max-width: 400px; height: 350px;"></div>
+                            
+                              
+                          </div>
                       </div>
                     </div>
 
@@ -493,51 +591,24 @@
     </main>
     <div class="trapezio"></div>
 
-
     <script src="../js/thirdpage.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
     <!-- Cytoscape -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.1/cytoscape.min.js"></script>
     <script src="../js/cytoscape.js"></script>
 
-    
+    <!-- Chart.js -->
+    <script src="../js/chart.js"></script>
+    <!-- JSCharting.js -->
+    <script src="../js/JSCharting.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
     <!-- Cards -->
     <script>
       // Ativa o recurso de colapso do Bootstrap
       var cardCollapse = new bootstrap.Collapse(document.getElementById('cardCollapse'), {
         toggle: false // Define para 'true' se você quiser que o card inicie expandido por padrão
-      });
-    </script>
-
-    <!-- Chart.js -->
-    <script>
-        var ctx = document.getElementsByClassName('line-chart')[0];
-
-      var chartGraph = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Biological process', 'Cancer', 'Cardiovascular disease', 'Digestive system disorder', 'Metabolic disorder', 'Other disease'],
-          datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          plugins: {
-            legend: {
-              position: 'right',
-              labels: {
-                font: {
-                        size: 10
-                }
-              }
-            }
-          }
-        }
       });
     </script>
 
