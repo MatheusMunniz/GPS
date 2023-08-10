@@ -6,7 +6,7 @@
 
     <link rel="shortcut icon" href="../src/GPSicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="../css/thirdpage copy.css">
+    <link rel="stylesheet" href="../css/analysis_screen.css">
     
 
     
@@ -68,7 +68,7 @@
             </div>
         </header>
        
-        <button type="button"class="btn btn-success btn-floating btn-lg"id="btn-back-to-top"><i class="bi bi-arrow-bar-up"></i></button>
+        <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top"><i class="bi bi-arrow-bar-up"></i></button>
 
         <div class="chat-tab" onclick="toggleChatBox()">
           <img id="mascot" src="../src/mrdnawelcome.png" alt="">
@@ -223,7 +223,7 @@
               </div>
             </div>
 
-            <!-- Dowble card: Drugs / Recomendations -->
+            <!-- Dowble card: Drugs / Recommendations -->
             <div class="double-row-card d-flex" style="gap: 10px;">
               
               <!-- Card Name -->
@@ -249,7 +249,7 @@
                 <div class="card-header" id="cardHeading">
                   <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse3" aria-expanded="false" aria-controls="cardCollapse">
                     <i class="bi bi-clipboard2-heart-fill" style= "font-size: 40px; color: #0137a3 !important; padding-right: 10px ; margin-right: 5px; cursor: pointer; border-right: 1px solid gray"></i>
-                    <h2 style="cursor: pointer;">Recomendations</h2>
+                    <h2 style="cursor: pointer;">Recommendations</h2>
                   </button>
                 </div>
                 <!-- Card Content -->
@@ -312,7 +312,7 @@
                   <div class="pgs-traits">
                     <h3 class="pgs-traits-title" style="width: 100%;">View PGS by Trait Category</h3>
                     <div class="chart-container d-flex justify-content-center">
-                      <canvas class="line-chart" width="100" height="1000"></canvas>
+                      <canvas class="line-chart"></canvas>
                     </div>
                     <div class="polygenic-scores">
                       <h2>Categories</h2>
@@ -338,121 +338,191 @@
                   </div>
                   
                   <div class="d-flex text-center flex-column">
-                    <div class="w-100" style="font-weight: bold; padding: 15px 10px !important;">
-                      <div style="background-color: rgb(206, 247, 255); padding: 5px 10px !important">Polygenic Scores</div>
-                    </div>
+                    <h3 class="pgs-traits-title" style="width: 100%; margin-top: 15px;">Polygenic Scores</h3>
                   </div>
 
-                  <div class="container-fluid p-2">
+                  <div class="w-100" style="display: flex; flex-wrap: wrap;">
                     
-                    <div class="row custom-row">
+                    <div class="w-50 d-flex flex-column" style="gap: 10px;">
 
-                      <div class="col-md-6 row-content">
-                        <div class="risk-score-title">Profile</div>
-                        <div class="container" style="padding: 0;">
-                          <div class="info-box">
-                            <img id="person-image" src="../src/female-icon.png">
-                            <ul>
-                              <li><strong>Gender:</strong> <span id="sex"> Female</span></li>
-                              <li><strong>Age:</strong> <span id="age"> 35</span></li>
-                            </ul>
+                      <div class="risk-box w-100" style="padding: 0 4px;">
+
+                        <div class="" style="height: 250;">
+  
+                          <div class="risk-score-title"  data-bs-toggle="collapse" data-bs-target="#profile-content">Pacient profile</div>
+                          <div class="risk-profile-content container collapse" id="profile-content">
+                            <div class="info-box">
+                              <img id="person-image" src="../src/female-icon.png">
+                              <ul>
+                                <li><span id="alert"><strong>Alert:</strong>The patient is a smoker</span></li>
+                                <li><span id="sex"><strong>Gender:</strong>Female</span></li>
+                                <li><span id="age"><strong>Age:</strong>35 y</span></li>
+                                <li><span id="height"><strong>Height:</strong>172 cm</span></li>
+                                <li><span id="weight"><strong>Weight:</strong>86 kg</span></li>
+                                <li id="profile-medical-history">
+                                  <span><strong>Past medical history</strong></span>
+                                  <div class="notes-Content">
+                                    <div class="note">
+                                      <p>
+                                        blood pressure;
+                                      </p>
+                                    </div>
+                                    <div class="note">
+                                      <p>
+                                        osteoporosis, neurogenic.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>                                
+                                <li id="profile-notes">
+                                  <span><strong>Notes</strong></span>
+                                  <div class="notes-Content">
+
+                                    <div class="note">
+                                      <h4>12/07/2023</h4>
+                                      <p>
+                                        Patient having severe sinusitis about two to three months ago with facial discomfort.
+                                      </p>
+                                    </div>
+                                    <div class="note">
+                                      <h4>10/07/2023</h4>
+                                      <p>
+                                        Nasal congestion, eye pain, and postnasal drip symptoms. Probable environmental inhalant allergies. Probable food allergies, and history of asthma.
+                                      </p>
+                                    </div>
+                                    <div class="note">
+                                      <h4>05/07/2023</h4>
+                                      <p>
+                                        Patient having severe sinusitis about two to three months ago with facial discomfort.
+                                      </p>
+                                    </div>
+
+                                  </div>
+                                </li>                                
+                              </ul>
+                            </div>
                           </div>
+
+  
                         </div>
+  
                       </div>
 
-                      <div class="col-md-6 row-content" style="height: 244px;">
-                        <div class="risk-score-title">SNP Effect size</div>
-                        <div class="risk-indicators-content scroll" style="height: 244px;">
+                      <div class="risk-box w-100" style="padding: 0 4px;">
 
-                          <table style="width: 100%;">
-                            <thead>
-                              <th>gene</th>
-                              <th>SNP</th>
-                              <th>Effect size</th>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>BRCA1</td>
-                                <td>rs1799950</td>
-                                <td>0.35</td>
-                              </tr>
-                              <tr>
-                                <td>TP53</td>
-                                <td>rs1042522</td>
-                                <td>-0.27</td>
-                              </tr>
-                              <tr>
-                                <td>APOE</td>
-                                <td>rs429358</td>
-                                <td>0.18</td>
-                              </tr>
-                              <tr>
-                                <td>IL6</td>
-                                <td>rs1800795</td>
-                                <td>0.21</td>
-                              </tr>
-                              <tr>
-                                <td>TP53</td>
-                                <td>rs1042522</td>
-                                <td>-0.27</td>
-                              </tr>
-                              <tr>
-                                <td>APOE</td>
-                                <td>rs429358</td>
-                                <td>0.18</td>
-                              </tr>
-                              <tr>
-                                <td>IL6</td>
-                                <td>rs1800795</td>
-                                <td>0.21</td>
-                              </tr>
-                              <tr>
-                                <td>MTHFR</td>
-                                <td>rs1801133</td>
-                                <td>-0.12</td>
-                              </tr>
-                            </tbody>
-                          </table>
-
+                        <div>
+  
+                          <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#study-pop-Content">Study Population</div>
+                          <div class="risk-studypop-content container collapse"  id="study-pop-Content">
+                            <div id="study_pop_chart" style="max-width: 740px;height: 430px;"></div>
+                          </div>
+  
                         </div>
+  
                       </div>
 
                     </div>
+                    
+                    <div class="w-50 d-flex flex-column" style="gap: 10px;">
 
-                    <div class="row custom-row">
-                      <div class="col-md-6 row-content">
-                        <div class="risk-score-title">Study Population</div>
-                        <div style="display: flex; justify-content: center; height: 435px;">
-                          <div id="study_pop_chart" style="max-width: 740px;height: 430px;margin-top: 40px"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 row-content" style="margin-top: 40px;">
-                          <div class="risk_score_chart_container">
-
+                      <div class="risk-box w-100" style="padding: 0 4px;">
+  
+                        <div>
+  
+                          <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#Risk-analysis-Content">Risk analysis</div>
+                          <div class="risk_score_chart_container container collapse" id="Risk-analysis-Content">
+  
                             <div style="z-index: 2; padding: 20px;">
-
+  
                               <div class="risk_score_chart_texts">
                                 <p>Decreased risk of liver cirrhosis based on</p>
                                 <h2 id='variants_number'>253,330</h2>
                                 <p> variants we looked at.</p>
                               </div>
                               <div id="labelsWrapper">
-
+  
                                 <div id="iconsDiv" style="width: 380px; height: 30px;"></div>
                                 <div id="labelDiv" style="margin-top: 10px; width: 380px; height: 130px;"></div>
                           
                               </div>
-
+  
                             </div>
                             
                             <div id="chartDiv" style="max-width: 400px; height: 350px;"></div>
                             
                               
                           </div>
+  
+                        </div>
+  
+  
                       </div>
+
+                      <div class="risk-box w-100" style="padding: 0 4px;">
+
+                        <div class="" style="height: 250;">
+  
+                          <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#SNP-Content">SNP Effect size</div>
+                          <div class="risk-indicators-content scroll container collapse" id="SNP-Content" style="max-height: 210px;">
+  
+                            <table style="width: 100%;">
+                              <thead style="position: sticky; top: 0; background-color: white;">
+                                <th>gene</th>
+                                <th>SNP</th>
+                                <th>Effect size</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>BRCA1</td>
+                                  <td>rs1799950</td>
+                                  <td>0.35</td>
+                                </tr>
+                                <tr>
+                                  <td>TP53</td>
+                                  <td>rs1042522</td>
+                                  <td>-0.27</td>
+                                </tr>
+                                <tr>
+                                  <td>APOE</td>
+                                  <td>rs429358</td>
+                                  <td>0.18</td>
+                                </tr>
+                                <tr>
+                                  <td>IL6</td>
+                                  <td>rs1800795</td>
+                                  <td>0.21</td>
+                                </tr>
+                                <tr>
+                                  <td>TP53</td>
+                                  <td>rs1042522</td>
+                                  <td>-0.27</td>
+                                </tr>
+                                <tr>
+                                  <td>APOE</td>
+                                  <td>rs429358</td>
+                                  <td>0.18</td>
+                                </tr>
+                                <tr>
+                                  <td>IL6</td>
+                                  <td>rs1800795</td>
+                                  <td>0.21</td>
+                                </tr>
+                                <tr>
+                                  <td>MTHFR</td>
+                                  <td>rs1801133</td>
+                                  <td>-0.12</td>
+                                </tr>
+                              </tbody>
+                            </table>
+  
+                          </div>
+  
+                        </div>
+  
+                      </div>
+
                     </div>
-
-
+                   
                   </div>
                   <!-- ------ -->
                 </div>
@@ -487,7 +557,7 @@
                                           <div class="mask bg-black bg-opacity-50 d-flex align-items-center justify-content-center">
                                               <a id="play" class="btn btn-floating btn-success btn-lg position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#modal1"><i class="bi bi-play-circle-fill"></i></a>
                                           </div>
-                                          <img class="img-fluid" src="../src/thirdpage/thumbnail.png" alt="Video title">
+                                          <img class="img-fluid" src="../src/analysis_screen/thumbnail.png" alt="Video title">
                                       </div>
                                   </div>
           
@@ -509,7 +579,7 @@
                               <div class="col-lg-4">
                                   <div class="">
                                     <div class="ratio ratio-16x9">
-                                      <img class="img-fluid" src="../src/thirdpage/thumbnail2.png" alt="Video title" style="cursor:pointer">
+                                      <img class="img-fluid" src="../src/analysis_screen/thumbnail2.png" alt="Video title" style="cursor:pointer">
                                     </div>
                                       <div class="card-body">
                                           <h5 class="card-title">Video Title</h5>
@@ -520,7 +590,7 @@
                               <div class="col-lg-4">
                                   <div class="">
                                       <div class="ratio ratio-16x9">
-                                        <img class="img-fluid" src="../src/thirdpage/thumbnail2.png" alt="Video title" style="cursor:pointer">
+                                        <img class="img-fluid" src="../src/analysis_screen/thumbnail2.png" alt="Video title" style="cursor:pointer">
                                       </div>
                                       <div class="card-body">
                                           <h5 class="card-title">Video Title</h5>
@@ -531,7 +601,7 @@
                               <div class="col-lg-4">
                                   <div class="">
                                     <div class="ratio ratio-16x9">
-                                      <img class="img-fluid" src="../src/thirdpage/thumbnail2.png" alt="Video title" style="cursor:pointer">
+                                      <img class="img-fluid" src="../src/analysis_screen/thumbnail2.png" alt="Video title" style="cursor:pointer">
                                     </div>
                                       <div class="card-body">
                                           <h5 class="card-title">Video Title</h5>
@@ -545,7 +615,7 @@
                                 <div class="col-lg-4">
                                     <div class="">
                                       <div class="ratio ratio-16x9">
-                                        <img class="img-fluid" src="../src/thirdpage/thumbnail2.png" alt="Video title" style="cursor:pointer">
+                                        <img class="img-fluid" src="../src/analysis_screen/thumbnail2.png" alt="Video title" style="cursor:pointer">
                                       </div>
                                         <div class="card-body">
                                             <h5 class="card-title">Video Title</h5>
@@ -556,7 +626,7 @@
                                 <div class="col-lg-4">
                                     <div class="">
                                         <div class="ratio ratio-16x9">
-                                          <img class="img-fluid" src="../src/thirdpage/thumbnail2.png" alt="Video title" style="cursor:pointer">
+                                          <img class="img-fluid" src="../src/analysis_screen/thumbnail2.png" alt="Video title" style="cursor:pointer">
                                         </div>
                                         <div class="card-body">
                                             <h5 class="card-title">Video Title</h5>
@@ -567,7 +637,7 @@
                                 <div class="col-lg-4">
                                     <div class="">
                                       <div class="ratio ratio-16x9">
-                                        <img class="img-fluid" src="../src/thirdpage/thumbnail2.png" alt="Video title" style="cursor:pointer">
+                                        <img class="img-fluid" src="../src/analysis_screen/thumbnail2.png" alt="Video title" style="cursor:pointer">
                                       </div>
                                         <div class="card-body">
                                             <h5 class="card-title">Video Title</h5>
@@ -591,18 +661,18 @@
     </main>
     <div class="trapezio"></div>
 
-    <script src="../js/thirdpage.js"></script>
+    <script src="../js/analysis_screen/analysis_screen.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <!-- Cytoscape -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.1/cytoscape.min.js"></script>
-    <script src="../js/cytoscape.js"></script>
+    <script src="../js/analysis_screen/cytoscape.js"></script>
 
     <!-- Chart.js -->
-    <script src="../js/chart.js"></script>
+    <script src="../js/analysis_screen/chart.js"></script>
     <!-- JSCharting.js -->
-    <script src="../js/JSCharting.js"></script>
+    <script src="../js/analysis_screen/JSCharting.js"></script>
 
     <!-- Cards -->
     <script>

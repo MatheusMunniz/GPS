@@ -27,6 +27,22 @@ function backToTop() {
 
 // SEARCH BY GENE
 
+
+
+// RISK SCORES //
+  // risk-box //
+  document.querySelectorAll('.risk-box').forEach((box) => {
+    box.addEventListener('shown.bs.collapse', () => {
+      box.classList.remove('collapsed'); // Remova a classe 'collapsed' para ajustar a altura
+    });
+
+    box.addEventListener('hidden.bs.collapse', () => {
+      box.classList.add('collapsed'); // Adicione a classe 'collapsed' para definir a altura de 10px
+    });
+  });
+
+
+  // profile //
 //Location bar
 
 function posicionarGeneLocation(element) {

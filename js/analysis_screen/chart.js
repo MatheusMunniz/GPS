@@ -1,7 +1,4 @@
-// thirdpage
-
-
- // GRÁFICO 1 Trait category pie chart
+// GRÁFICO 1 Trait category pie chart
  var ctxPieChart = document.getElementsByClassName('line-chart')[0];
  var chartPieGraph = new Chart(ctxPieChart, {
    type: 'doughnut',
