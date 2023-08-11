@@ -22,7 +22,7 @@
     <script type="text/javascript" src="../jsc/jscharting.js"></script>
     <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
     
-    <title>GPS</title>
+    <title>GPS - Analysis</title>
   </head>
 
   <body>
@@ -71,7 +71,7 @@
         <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top"><i class="bi bi-arrow-bar-up"></i></button>
 
         <div class="chat-tab" onclick="toggleChatBox()">
-          <img id="mascot" src="../src/mrdnawelcome.png" alt="">
+          <img id="mascot" src="../src/analysis_screen/mascot_question.png" alt="">
         </div>
         <div class="chat-box" id="chatBox">
           <div class="chat-header">
@@ -81,7 +81,7 @@
             <!-- Aqui você pode adicionar o conteúdo do chat -->
             <p>Hi! I'm Mr.DNA and i will be your virtual assistant inside the GPS</p>
           </div>
-          <div class="d-flex w-100 " style="padding: 10px; transform: translateY(170px);">
+          <div class="d-flex w-100 " style="padding: 10px; transform: translateY(190px);">
             <input type="text" placeholder="Ask me a question" style="padding: 0 10px; width: 100%; height: 30px;">
           </div>
           
@@ -238,7 +238,11 @@
                 <!-- Card Content -->
                 <div id="cardCollapse2" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
                   <div class="card-body">
-                    conteudo
+            
+                    <div>
+
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -255,7 +259,36 @@
                 <!-- Card Content -->
                 <div id="cardCollapse3" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
                   <div class="card-body">
-                    conteudo
+
+                    <div id="recommendations-content">
+                      <form class="d-flex ms-auto justify-content-center" style="height: 40px; padding: 0 10px;">
+                        <input type="text" id="searchInput" class="form-control me-sm-2" placeholder="Search">
+                      </form>
+  
+                      <div>
+                        <ul>
+  
+                          <li class="recommendation">
+                            <h3>Long-term treatment (>6 months)</h3>
+                            <p>the ASH guideline panel suggests long-term anticoagulation for secondary prophylaxis (.6 months) rather than short-term treatment alone (3-6 months) (conditional recommendation, low certainty in the evidence of effects).</p>
+                          </li>
+                          <li class="recommendation">
+                            <h3>Primary prophylaxis</h3>
+                            <p>The use of thromboprophylaxis rather than non-thromboprophylaxis is suggested (conditional recommendation, very low certainty on evidence of effects).</p>
+                          </li>
+                          <li class="recommendation">
+                            <h3>Primary prophylaxis</h3>
+                            <p>Suggests using thromboprophylaxis over no thromboprophylaxis (conditional recommendation, very low certaninty in the evidence of effects).</p>
+                          </li>
+                          <li class="recommendation">
+                            <h3>Primary prophylaxis</h3>
+                            <p>Suggests using thromboprophylaxis over no thromboprophylaxis (conditional recommendation, very low certaninty in the evidence of effects).</p>
+                          </li>
+  
+                        </ul>
+                      </div>
+                    </div>
+                
                   </div>
                 </div>
               </div>
@@ -414,7 +447,7 @@
   
                           <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#study-pop-Content">Study Population</div>
                           <div class="risk-studypop-content container collapse"  id="study-pop-Content">
-                            <div id="study_pop_chart" style="max-width: 740px;height: 430px;"></div>
+                            <div id="study_pop_chart" style="max-width: 740px;height: 430px; visibility: hidden;"></div>
                           </div>
   
                         </div>
@@ -448,7 +481,7 @@
   
                             </div>
                             
-                            <div id="chartDiv" style="max-width: 400px; height: 350px;"></div>
+                            <div id="chartDiv" style="max-width: 400px; height: 350px;" ></div>
                             
                               
                           </div>

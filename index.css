@@ -42,10 +42,10 @@ body {
 
 #btn-back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 70px;
+    right: 10px;
     display: none;
-    z-index: 100;
+    z-index: 1000;
 }
 
 

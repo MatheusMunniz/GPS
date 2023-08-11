@@ -51,6 +51,41 @@ header .card {
             letter-spacing: 2px;
         }
 
+
+/* RECOMMENDATIONS */
+#recommendations-content div {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 10px; 
+  max-height: 220px; 
+  overflow-y: scroll;
+}
+  #recommendations-content div ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #recommendations-content div ul .recommendation {
+    border-left: 5px solid #09c25a;
+    padding: 5px;
+    border-radius: 4px;
+    transition: .3s;
+  }
+  #recommendations-content div ul .recommendation:hover {
+    background-color: #f3f3f3;
+  }
+  #recommendations-content div ul .recommendation h3 {
+    font-size: 1.2rem;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+
+  }
+  #recommendations-content div ul .recommendation p {
+
+  }
+
 /* GENE */
 #gene-content {
     padding: 10px;
@@ -385,7 +420,8 @@ height: 100%;
 
 /* CHAT */
 #mascot {
-    width: 30px;
+  height: 50px;
+  width: 65px;
 }
 .chat-tab {
     display: flex;
@@ -393,13 +429,13 @@ height: 100%;
     width: 65px;
     background-color: white;
     border-radius: 4px;
-    border: 3px solid #0137a3;
+    border-left: 3px solid #0ed700;
     color: #fff;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     position: fixed;
     bottom: 0;
-    left: 0;
-    transform: translateY(-50%);
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     cursor: pointer;
     z-index: 1000;
     transition: .3s;
@@ -407,25 +443,32 @@ height: 100%;
 .chat-tab:hover {
     width: 75px;
     background-color: white;
-    border: 3px solid #0ed700;
+    border-left: 3px solid #0137a3;
   }
   
   .chat-box {
+    border-radius: 10px;
     background-color: #f1f1f1;
     width: 300px;
     height: 400px;
     position: fixed;
     bottom: 0;
-    left: -300px;
-    transform: translateY(-50%);
-    transition: left 0.3s ease-in-out;
+    right: -300px;
+    transition: right 0.3s ease-in-out;
     z-index: 1000;
+  }
+  .chat-box input {
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    
   }
   
   .chat-header {
-    background-color: #007bff;
+    border-radius: 10px;
+    background-color: #0137a3;
     color: #fff;
-    padding: 10px;
+    padding-left: 5px;
     display: flex;
     justify-content: space-between;
   }
@@ -433,7 +476,7 @@ height: 100%;
   .close-btn {
     background: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
     cursor: pointer;
   }
@@ -444,10 +487,10 @@ height: 100%;
   
   /* Estilo da aba quando a caixa de chat está aberta */
   .chat-open {
-    left: 0;
+    right: 0px;
   }
   
   /* Estilo da aba quando a caixa de chat está fechada */
   .chat-closed {
-    left: -100px;
+    right: -100px;
   }

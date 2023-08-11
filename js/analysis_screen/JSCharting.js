@@ -67,7 +67,7 @@ var chart = JSC.chart('chartDiv', {
             size: 35 
           } 
         }, 
-        points: [{ y: 15 }] 
+        points: [{ y: 82}] // Altere aqui a % do gráfico
       } 
     ], 
     toolbar: { 
@@ -115,7 +115,7 @@ var chart = JSC.chart('chartDiv', {
     }
   }
   
-  var value = 12;
+  var value = 12; // Altere aqui a % do gráfico
   var palette = getColorPalette(value);
   var icons = [
     '<icon name=material/social/person margin=2 size=30 color=' + palette[0] + '>',
