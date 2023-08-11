@@ -27,6 +27,15 @@ header .card {
         padding: 5px 10px;
         background: rgb(206, 247, 255);
     }
+    .genome-card .card-header button i, img{
+      width: 50px;
+      font-size: 40px; 
+      color: #0137a3 !important; 
+      padding-right: 10px ; 
+      margin-right: 5px; 
+      cursor: pointer; 
+      border-right: 1px solid gray;
+    }
       .genome-card .btn-link {
         width: 100%;
         text-decoration: none;

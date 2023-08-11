@@ -156,39 +156,3 @@ var chart = JSC.chart('chartDiv', {
       '</span>'
     );
   }
-
-  // StudyPop chart 
-
-  var options = {
-    debug: false,
-    type: 'horizontal column',
-    title_label_text: 'Genetic risk score distribution in the study population', // Título do gráfico
-    yAxis_scale_range: [0, 100], // Definindo o intervalo do eixo Y de 0 a 100
-    xAxis_scale_range: [-4, 5], // Definindo o intervalo do eixo X de -4 a 4
-    defaultTooltip_label_text: 'X: %xValue, Y: %yValue', // Texto do tooltip
-    legend_template: '%icon %name', // Exibir apenas cor e nome na legenda
-    series: [
-      {
-        name: 'Population',
-        points: [
-          { x: -3, y: 20 },
-          { x: -2, y: 50 },
-          { x: -1, y: 70 },
-          { x: 0, y: 85 },
-          { x: 1, y: 90 },
-          { x: 2, y: 80 },
-          { x: 3, y: 60 },
-          { x: 4, y: 30 },
-        ],
-      },
-      // Novo ponto para a barra vermelha
-      {
-        name: 'Patient', // Nome da barra vermelha
-        points: [{ x: -3, y: 35 }],
-        defaultPoint: {
-          color: 'red',
-        },
-      },
-    ],
-  };
-  var chart = JSC.chart('study_pop_chart', options);

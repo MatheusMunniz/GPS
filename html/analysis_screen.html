@@ -89,13 +89,33 @@
         <section>
           <div class="genome-grid">
 
+            <!-- User Profile -->
+            <div class="genome-card card">
+              <!-- Card Header -->
+              <div class="card-header" id="cardHeading">
+                <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse0" aria-expanded="false" aria-controls="cardCollapse">
+                  <i class="bi bi-person-lines-fill"></i>
+                  <h2 style="cursor: pointer;">User Profile</h2>
+                </button>
+              </div>
+              <!-- Card Content -->
+              <div id="cardCollapse0" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
+                <div class="card-body">
+
+                  <div id="gene-content">
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
 
             <!-- Gene -->
             <div class="genome-card card">
               <!-- Card Header -->
               <div class="card-header" id="cardHeading">
                 <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse1" aria-expanded="false" aria-controls="cardCollapse">
-                  <img src="../src/geneIcon.png" alt="" style="width: 50px; color: #0137a3 !important; padding-right: 10px ; margin-right: 5px; cursor: pointer; border-right: 1px solid gray">
+                  <img src="../src/geneIcon.png">
                   <h2 style="cursor: pointer;">Gene</h2>
                 </button>
               </div>
@@ -226,12 +246,12 @@
             <!-- Dowble card: Drugs / Recommendations -->
             <div class="double-row-card d-flex" style="gap: 10px;">
               
-              <!-- Card Name -->
+              <!-- Drugs -->
               <div class="genome-card card w-100">
                 <!-- Card Header -->
                 <div class="card-header" id="cardHeading">
                   <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse2" aria-expanded="false" aria-controls="cardCollapse">
-                    <i class="bi bi-capsule" style= "font-size: 40px; color: #0137a3 !important; padding-right: 10px ; margin-right: 5px; cursor: pointer; border-right: 1px solid gray"></i>
+                    <i class="bi bi-capsule"></i>
                     <h2 style="cursor: pointer;">Drugs</h2>
                   </button>
                 </div>
@@ -247,12 +267,12 @@
                 </div>
               </div>
 
-              <!-- Card Name -->
+              <!-- Recommendations -->
               <div class="genome-card card w-100">
                 <!-- Card Header -->
                 <div class="card-header" id="cardHeading">
                   <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse3" aria-expanded="false" aria-controls="cardCollapse">
-                    <i class="bi bi-clipboard2-heart-fill" style= "font-size: 40px; color: #0137a3 !important; padding-right: 10px ; margin-right: 5px; cursor: pointer; border-right: 1px solid gray"></i>
+                    <i class="bi bi-clipboard2-heart-fill"></i>
                     <h2 style="cursor: pointer;">Recommendations</h2>
                   </button>
                 </div>
@@ -299,7 +319,7 @@
               <!-- Card Header -->
               <div class="card-header" id="cardHeading">
                 <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse4" aria-expanded="false" aria-controls="cardCollapse">
-                  <img src="../src/networkIcon.png" alt="" style="width: 50px; color: #0137a3 !important; padding-right: 10px ; margin-right: 5px; cursor: pointer; border-right: 1px solid gray">
+                  <img src="../src/networkIcon.png" alt="">
                   <h2 style="cursor: pointer;">Gene Network</h2>
                 </button>
               </div>
@@ -327,7 +347,7 @@
               <!-- Card Header -->
               <div class="card-header" id="cardHeading">
                 <button class="btn btn-link d-flex align-items-center" style="margin-right: 5px; " data-bs-toggle="collapse" data-bs-target="#cardCollapse5" aria-expanded="false" aria-controls="cardCollapse">
-                  <i class="bi bi-graph-down" style= "font-size: 40px; color: #0137a3 !important; padding-right: 10px ; margin-right: 5px; cursor: pointer; border-right: 1px solid gray"></i>
+                  <i class="bi bi-graph-down"></i>
                   <h2 style="cursor: pointer;">Poligenic Risk scores</h2>
                 </button>
                 <div style="width: fit-content">
@@ -340,7 +360,6 @@
               <!-- Card Content -->
               <div id="cardCollapse5" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
                 <div class="card-body">
-                  
                   <!-- ------ -->
                   <div class="pgs-traits">
                     <h3 class="pgs-traits-title" style="width: 100%;">View PGS by Trait Category</h3>
@@ -567,7 +586,7 @@
                 
               <a aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none; background-image: url(../src/boxbackground.png); background-repeat: no-repeat;">
                   <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample6" role="button">
-                      <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 30px;"> Education</h3>
+                      <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 40px;"> Education</h3>
                   </div>
                   <div class="ratio ratio-16x10 collapse" id="collapseExample6">
                       <div class="embed-responsive embed-responsive-16by10">
@@ -603,7 +622,6 @@
                               </div>
           
                           </div>
-                          <!-- Vídeo Principal -->
           
                           <!-- Vídeos adicionais -->
 
