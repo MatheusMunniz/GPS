@@ -32,25 +32,45 @@
 }
 
 
-.samples li {
-    transition: .3s;
+/* Samples select */
+.samples .list-group ul {
+    background: #dcdcdc;
+    gap: 5px;
 }
-.samples li:hover{
-    background: linear-gradient(to right, #3675f4,  #5a91ff, rgb(152, 255, 152));
-    border: none;
-    outline: none;
-}
-.samples li:hover label {
-    color: white;
-    letter-spacing: 2px;
-}
+    .samples .genome {
+        cursor: pointer;
+        transition: .3s;
+    }
+    .samples .genome:hover{
+        background: linear-gradient(to right, #3675f4,  #5a91ff, rgb(152, 255, 152));
+        border: none;
+        outline: none;
+    }
+    .samples .genome label {
+        font-size: 2rem;
 
-.expandable-section {
-    margin: 5px 10px 0px 0px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f1f1f1;
-}
+    }
+    .samples .genome:hover label {
+        color: white;
+        letter-spacing: 2px;
+    }
+    .samples .genome:hover .users-access p {
+        color: white;
+    }
+
+    .samples .genome .analysis-type {
+        width: 200px;
+        height: 100%;
+        z-index: 100;
+        margin-right: 10px;
+    }
+
+    .expandable-section {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+    }
 
 
 
@@ -104,6 +124,81 @@ input[type="checkbox"] {
 }
 
 
+/* profile */
+.info-box {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    flex-direction: column;
+
+  }
+  .info-box img {
+    width: 100px;
+    height: 200px;
+    margin: 5px 20px 5px 20px;
+  }
+  .info-box ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+  }
+  .info-box .profile-description {
+    height: 205px;
+  }
+    .info-box .profile-description span{
+
+    font-size: 1.2rem;
+    padding: 5px;
+    }
+    .info-box li {
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      padding: 3px;
+      font-size: 1.2rem;
+      background: rgb(241, 253, 255);
+    }
+      .info-box li strong {
+        margin-right: 5px;
+      }
+      .info-box li span {
+        
+        border-radius: 4px;
+        padding: 0 10px;
+        width: 100%;
+      }
+
+        .info-box #profile-notes span {
+          background: rgb(194, 255, 225);
+        }
+        .info-box .profile-medical-history li span {
+          background: rgb(194, 236, 255);
+        }
+        .info-box #alert {
+          background: rgb(255, 194, 194);
+        }
+
+
+
+        .info-box li .notes-Content {
+            max-height: 100px;
+            gap: 10px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: rgb(243, 243, 243);
+        }
+        .info-box li div h4 {
+          width: 100%;
+          font-size: .9rem;
+          margin: 0;
+        }
+        .info-box li div p {
+          font-size: 1rem;
+          margin: 0;
+        }
 
 /* MEDIA QUERY Celular*/
 @media (max-width: 650px) {
