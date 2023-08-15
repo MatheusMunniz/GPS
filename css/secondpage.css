@@ -69,7 +69,7 @@
         margin-top: 10px;
         padding: 10px;
         border-radius: 5px;
-        background-color: #f1f1f1;
+        background-color: #dcdcdc;
     }
 
 
@@ -87,41 +87,36 @@
     align-items: center;
     justify-content: center;
 }
-
-.avatar img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.avatar-sm {
-    font-size: .875rem;
-    width: 36px;
-    height: 36px;
-    transition: .3s;
-}
-.avatar-group {
-    width: 150px;
-}
-.avatar-group .avatar {
-    position: relative;
-    z-index: 2;
-    border: 2px solid #fff;
-}
-
-.avatar-group .avatar:hover {
-    z-index: 3;
-    border:  2px solid #0137a3;
-    width: 40px;
-    height: 40px;
-}
-
-.avatar-group .avatar + .avatar {
-    margin-left: -1rem;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
+    .avatar img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    .avatar-sm {
+        font-size: .875rem;
+        width: 36px;
+        height: 36px;
+        transition: .3s;
+    }
+    .avatar-group {
+        width: 150px;
+    }
+    .avatar-group .avatar {
+        position: relative;
+        z-index: 2;
+        border: 2px solid #fff;
+    }
+    .avatar-group .avatar:hover {
+        z-index: 3;
+        border:  2px solid #0137a3;
+        width: 40px;
+        height: 40px;
+    }
+    .avatar-group .avatar + .avatar {
+        margin-left: -1rem;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
 
 
 /* profile */
@@ -130,75 +125,88 @@ input[type="checkbox"] {
     height: 100%;
     padding: 5px;
     flex-direction: column;
-
-  }
-  .info-box img {
-    width: 100px;
-    height: 200px;
-    margin: 5px 20px 5px 20px;
-  }
-  .info-box ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 5px;
-  }
-  .info-box .profile-description {
-    height: 205px;
-  }
-    .info-box .profile-description span{
-
-    font-size: 1.2rem;
-    padding: 5px;
+    gap: 5px;
+}
+    .info-box img {
+        width: 150px;
+        height: 240px;
+        margin: 5px 10px 5px 15px;
     }
-    .info-box li {
-      color: #333333;
-      display: flex;
-      flex-direction: column;
-      padding: 3px;
-      font-size: 1.2rem;
-      background: rgb(241, 253, 255);
-    }
-      .info-box li strong {
-        margin-right: 5px;
-      }
-      .info-box li span {
-        
-        border-radius: 4px;
-        padding: 0 10px;
+    .info-box ul {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-      }
-
-        .info-box #profile-notes span {
-          background: rgb(194, 255, 225);
+        padding: 5px;
+    }
+        .info-box .profile-description {
+            width: 100%;
+            height: 100%;
         }
-        .info-box .profile-medical-history li span {
-          background: rgb(194, 236, 255);
+        .info-box .profile-description .profile-title {
+            border-radius: 4px;
+            display: flex;
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 1.5rem;
+            list-style: none;
+            font-weight: bold;
+            background-color: #61839e;
+            color: white;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-align: left;
+            align-items: center;
         }
-        .info-box #alert {
-          background: rgb(255, 194, 194);
+        .info-box .profile-description .profile-title i {
+            margin-right: 10px;
+            font-size: 30px;
         }
-
-
-
-        .info-box li .notes-Content {
-            max-height: 100px;
-            gap: 10px;
-            overflow-y: scroll;
+        .info-box .profile-description ul {
+            list-style: none;
             display: flex;
             flex-direction: column;
-            padding: 10px;
-            background-color: rgb(243, 243, 243);
+            gap: 5px;
+            padding: 0;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            max-height: 195px;
+            overflow-y: scroll;
+
         }
-        .info-box li div h4 {
-          width: 100%;
-          font-size: .9rem;
-          margin: 0;
+        .info-box .profile-description ul li {
+            font-size: 1.2rem;
+            padding: 3px 5px;
+            border-radius: 4px;
+            background-color: white;
         }
-        .info-box li div p {
-          font-size: 1rem;
-          margin: 0;
+        .info-box .profile-description ul li strong {
+            margin-right: 5px;
         }
+            #alert {
+                background-color: #c6303e;
+                color: white;
+            }
+    
+        .profile-notes ul {
+            max-height: 210px;
+        }
+        .profile-notes .note {
+            padding: 20px;
+        }
+            .profile-notes .note h4 {
+                background: #9eadcb;
+                color: white;
+                width: fit-content;
+                padding: 2px 5px;
+                border-radius: 4px;
+                font-size: 1.2rem;
+                margin: 0;
+            }
+            .profile-notes .note p {
+                margin: 0;
+            }
+
+
 
 /* MEDIA QUERY Celular*/
 @media (max-width: 650px) {
