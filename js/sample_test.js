@@ -1,8 +1,7 @@
-// Carrega os dados de amostra do arquivo JSON
 fetch('../json/testesample_b.json')
     .then(response => response.json())
     .then(sampleData => {
-        var table = document.getElementById("gene_table");
+        var tbody = document.querySelector("#gene_table tbody");
 
         sampleData.forEach(function(sample) {
             var row = document.createElement("tr");
@@ -17,6 +16,6 @@ fetch('../json/testesample_b.json')
 
             // Adicione mais células conforme necessário
 
-            table.appendChild(row);
+            tbody.appendChild(row);
         });
     });

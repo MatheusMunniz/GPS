@@ -29,7 +29,7 @@ function backToTop() {
 
 document.addEventListener("DOMContentLoaded", function() {
   var table = document.getElementById("gene_table");
-  var searchInput = document.getElementById("searchInput");
+  var searchInput = document.getElementById("gene_search_input");
   var searchedGene = document.getElementById("searched_gene");
 
   searchInput.addEventListener("input", function() {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }
 
-      searchedGene.textContent = "Searched Gene/Position: " + searchValue;
+      searchedGene.textContent = "Results for: " + searchValue;
       searchedGene.style.display = "block";
   });
 });

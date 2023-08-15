@@ -89,27 +89,6 @@
         <section>
           <div class="genome-grid">
 
-            <!-- User Profile -->
-            <div class="genome-card card">
-              <!-- Card Header -->
-              <div class="card-header" id="cardHeading">
-                <button class="btn btn-link d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#cardCollapse0" aria-expanded="false" aria-controls="cardCollapse">
-                  <i class="bi bi-person-lines-fill"></i>
-                  <h2 style="cursor: pointer;">User Profile</h2>
-                </button>
-              </div>
-              <!-- Card Content -->
-              <div id="cardCollapse0" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
-                <div class="card-body">
-
-                  <div id="gene-content">
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
             <!-- Gene -->
             <div class="genome-card card">
               <!-- Card Header -->
@@ -123,17 +102,15 @@
               <div id="cardCollapse1" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
                 <div class="card-body">
 
-                  <form class="d-flex ms-auto justify-content-center" style="height: 40px; padding: 0 10px;">
-                    <input type="text" id="searchInput" class="form-control me-sm-2" placeholder="Search by gene">
-                  </form>
+                  <input type="text" id="gene_search_input" class="form-control" placeholder="Search">
+                  <p id="searched_gene" style="display: none;"></p>
                   <div id="gene-content">
-                      <h5 id="searched_gene" style="display: none;"></h5>
                       <table id="gene_table">
-                          <tr>
-                              <th>Gene</th>
-                              <th>Position</th>
-                              <!-- Adicione mais cabeçalhos conforme necessário -->
-                          </tr>
+                        <thead>
+                          <th>Gene</th>
+                          <th>Position</th>
+                        </thead>
+                        <tbody></tbody>
                       </table>
                   </div>
 
@@ -296,86 +273,6 @@
                     <div class="w-50 d-flex flex-column" style="gap: 10px;">
 
                       <div class="risk-box w-100" style="padding: 0 4px;">
-
-                        <div class="" style="height: 250;">
-  
-                          <div class="risk-score-title"  data-bs-toggle="collapse" data-bs-target="#profile-content">Pacient profile</div>
-                          <div class="risk-profile-content container collapse" id="profile-content">
-                            <div class="info-box">
-                              <img id="person-image" src="../src/female-icon.png">
-                              <ul>
-                                <li><span id="alert"><strong>Alert:</strong>The patient is a smoker</span></li>
-                                <li><span id="sex"><strong>Gender:</strong>Female</span></li>
-                                <li><span id="age"><strong>Age:</strong>35 y</span></li>
-                                <li><span id="height"><strong>Height:</strong>172 cm</span></li>
-                                <li><span id="weight"><strong>Weight:</strong>86 kg</span></li>
-                                <li id="profile-medical-history">
-                                  <span><strong>Past medical history</strong></span>
-                                  <div class="notes-Content">
-                                    <div class="note">
-                                      <p>
-                                        blood pressure;
-                                      </p>
-                                    </div>
-                                    <div class="note">
-                                      <p>
-                                        osteoporosis, neurogenic.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </li>                                
-                                <li id="profile-notes">
-                                  <span><strong>Notes</strong></span>
-                                  <div class="notes-Content">
-
-                                    <div class="note">
-                                      <h4>12/07/2023</h4>
-                                      <p>
-                                        Patient having severe sinusitis about two to three months ago with facial discomfort.
-                                      </p>
-                                    </div>
-                                    <div class="note">
-                                      <h4>10/07/2023</h4>
-                                      <p>
-                                        Nasal congestion, eye pain, and postnasal drip symptoms. Probable environmental inhalant allergies. Probable food allergies, and history of asthma.
-                                      </p>
-                                    </div>
-                                    <div class="note">
-                                      <h4>05/07/2023</h4>
-                                      <p>
-                                        Patient having severe sinusitis about two to three months ago with facial discomfort.
-                                      </p>
-                                    </div>
-
-                                  </div>
-                                </li>                                
-                              </ul>
-                            </div>
-                          </div>
-
-  
-                        </div>
-  
-                      </div>
-
-                      <div class="risk-box w-100" style="padding: 0 4px;">
-
-                        <div>
-  
-                          <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#study-pop-Content">Study Population</div>
-                          <div class="risk-studypop-content container collapse"  id="study-pop-Content">
-                            <div id="study_pop_chart" style="max-width: 740px;height: 430px; visibility: hidden;"></div>
-                          </div>
-  
-                        </div>
-  
-                      </div>
-
-                    </div>
-                    
-                    <div class="w-50 d-flex flex-column" style="gap: 10px;">
-
-                      <div class="risk-box w-100" style="padding: 0 4px;">
   
                         <div>
   
@@ -398,7 +295,7 @@
   
                             </div>
                             
-                            <div id="chartDiv" style="max-width: 400px; height: 350px;" ></div>
+                            <div id="chartDiv" style="max-width: 420px; height: 350px;" ></div>
                             
                               
                           </div>
@@ -407,6 +304,10 @@
   
   
                       </div>
+
+                    </div>
+                    
+                    <div class="w-50 d-flex flex-column" style="gap: 10px;">
 
                       <div class="risk-box w-100" style="padding: 0 4px;">
 
@@ -470,7 +371,7 @@
                         </div>
   
                       </div>
-
+                      
                     </div>
                    
                   </div>
