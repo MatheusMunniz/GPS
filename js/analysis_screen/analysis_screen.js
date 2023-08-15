@@ -27,7 +27,32 @@ function backToTop() {
 
 // SEARCH BY GENE
 
+document.addEventListener("DOMContentLoaded", function() {
+  var table = document.getElementById("gene_table");
+  var searchInput = document.getElementById("searchInput");
+  var searchedGene = document.getElementById("searched_gene");
 
+  searchInput.addEventListener("input", function() {
+      var searchValue = searchInput.value.toLowerCase();
+      var rows = table.getElementsByTagName("tr");
+
+      for (var i = 1; i < rows.length; i++) {
+          var geneCell = rows[i].getElementsByTagName("td")[0];
+          var positionCell = rows[i].getElementsByTagName("td")[1];
+          var geneText = geneCell.textContent || geneCell.innerText;
+          var positionText = positionCell.textContent || positionCell.innerText;
+
+          if (geneText.toLowerCase().indexOf(searchValue) > -1 || positionText.toLowerCase().indexOf(searchValue) > -1) {
+              rows[i].style.display = "";
+          } else {
+              rows[i].style.display = "none";
+          }
+      }
+
+      searchedGene.textContent = "Searched Gene/Position: " + searchValue;
+      searchedGene.style.display = "block";
+  });
+});
 
 // RISK SCORES //
   // risk-box //
