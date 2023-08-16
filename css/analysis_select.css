@@ -69,7 +69,7 @@
         margin-top: 10px;
         padding: 10px;
         border-radius: 5px;
-        background-color: #dcdcdc;
+        background-color: white;
     }
 
 
@@ -142,7 +142,7 @@
             width: 100%;
             height: 100%;
         }
-        .info-box .profile-description .profile-title {
+        .info-box .profile-title {
             border-radius: 4px;
             display: flex;
             width: 100%;
@@ -157,7 +157,7 @@
             text-align: left;
             align-items: center;
         }
-        .info-box .profile-description .profile-title i {
+        .info-box .profile-title i {
             margin-right: 10px;
             font-size: 30px;
         }
@@ -166,8 +166,7 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
-            padding: 0;
-            background-color: #f1f1f1;
+            background-color: white;
             border-radius: 4px;
             max-height: 195px;
             overflow-y: scroll;
@@ -177,7 +176,7 @@
             font-size: 1.2rem;
             padding: 3px 5px;
             border-radius: 4px;
-            background-color: white;
+            background-color: #eeeeee;
         }
         .info-box .profile-description ul li strong {
             margin-right: 5px;
@@ -186,26 +185,170 @@
                 background-color: #c6303e;
                 color: white;
             }
-    
-        .profile-notes ul {
-            max-height: 210px;
-        }
-        .profile-notes .note {
-            padding: 20px;
-        }
-            .profile-notes .note h4 {
-                background: #9eadcb;
-                color: white;
-                width: fit-content;
-                padding: 2px 5px;
-                border-radius: 4px;
-                font-size: 1.2rem;
-                margin: 0;
-            }
-            .profile-notes .note p {
-                margin: 0;
-            }
 
+/* COMMENT SECTION */
+
+.content-item {
+    padding:30px 0;
+    background-color:#FFFFFF;
+}
+
+.content-item.grey {
+    background-color:#F0F0F0;
+    padding:50px 0;
+    height:100%;
+}
+
+.content-item h2 {
+    font-weight:700;
+    font-size:35px;
+    line-height:45px;
+    text-transform:uppercase;
+    margin:20px 0;
+}
+
+.content-item h3 {
+    font-weight:400;
+    font-size:20px;
+    color:#555555;
+    margin:10px 0 15px;
+    padding:0;
+}
+
+
+.content-headline {
+    height:1px;
+    text-align:center;
+    margin:20px 0 70px;
+}
+
+.content-headline h2 {
+    background-color:#FFFFFF;
+    display:inline-block;
+    margin:-20px auto 0;
+    padding:0 20px;
+}
+
+.grey .content-headline h2 {
+    background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+    font-size:14px;
+    color:#AAAAAA;
+    display:block;
+}
+
+
+#comments {
+    margin-bottom: 10px;
+    background-color:white;
+}
+
+#comments form {
+    margin-top: 20px;
+}
+#comments form .row {
+    padding: 0 10px;
+}
+
+#comments form h3 {
+    margin: 0;
+}
+
+#comments form fieldset {
+    margin-top: 10px;
+    clear:both;
+}
+
+#comments form textarea {
+    width: 100%;
+    height:100px;
+}
+
+#comments .comment {
+    border-top:1px solid #DDDDDD;
+    padding:20px 10px;
+    margin:0;
+}
+
+#comments .comment > .pull-left {
+    margin-right:20px;
+}
+
+#comments .comment .media-body .comment-title {
+    gap: 10px;
+}
+
+#comments .comment .media-body div {
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+#comments .comment .media-body p {
+    background-color: #fff8e2;
+    padding: 10px;
+}
+
+#comments .comment .media-body .media-detail {
+    transform: translateY(-10px);
+}
+#comments .comment .media-body .media-detail p {
+    background-color: transparent;
+    border-radius: 4px;
+    
+}
+
+#comments .comment .media-body .comment-title i {
+    color: #555555;
+    cursor: pointer;
+}
+
+#comments .comment h4 {
+    font-size: 1.3rem;
+    margin:0 0 10px;
+}
+
+#comments .comment h4 span {
+    font-size:14px;
+    float:right;
+    color:#999999;
+}
+
+#comments .comment p {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align:justify;
+}
+
+#comments .comment i {
+    margin-right: 5px;
+}
+
+#comments .media-detail {
+    margin:0;
+}
+
+#comments .media-detail li {
+    color:#AAAAAA;
+    font-size: 1rem;
+    padding-right: 10px;
+    font-weight:600;
+}
+
+#comments .media-detail a:hover {
+    text-decoration:underline;
+}
+
+#comments .media-detail li:last-child {
+    padding-right:0;
+}
+
+#comments .media-detail li i {
+    color:#666666;
+    font-size:15px;
+    margin-right:10px;
+}
 
 
 /* MEDIA QUERY Celular*/

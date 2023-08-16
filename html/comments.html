@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <style>
+        body{margin-top:20px;}
+
+
+/* COMMENT SECTION */
+
+    .content-item {
+        padding:30px 0;
+        background-color:#FFFFFF;
+    }
+
+    .content-item.grey {
+        background-color:#F0F0F0;
+        padding:50px 0;
+        height:100%;
+    }
+
+    .content-item h2 {
+        font-weight:700;
+        font-size:35px;
+        line-height:45px;
+        text-transform:uppercase;
+        margin:20px 0;
+    }
+
+    .content-item h3 {
+        font-weight:400;
+        font-size:20px;
+        color:#555555;
+        margin:10px 0 15px;
+        padding:0;
+    }
+
+
+    .content-headline {
+        height:1px;
+        text-align:center;
+        margin:20px 0 70px;
+    }
+
+    .content-headline h2 {
+        background-color:#FFFFFF;
+        display:inline-block;
+        margin:-20px auto 0;
+        padding:0 20px;
+    }
+
+    .grey .content-headline h2 {
+        background-color:#F0F0F0;
+    }
+
+    .content-headline h3 {
+        font-size:14px;
+        color:#AAAAAA;
+        display:block;
+    }
+
+
+    #comments {
+        box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+        background-color:#FFFFFF;
+    }
+
+    #comments form {
+        margin-top:20px;
+    }
+    #comments form .row {
+        padding: 0 10px;
+    }
+
+    #comments form h3 {
+        margin: 0;
+    }
+
+    #comments form fieldset {
+        margin-top: 10px;
+        clear:both;
+    }
+
+    #comments form textarea {
+        width: 100%;
+        height:100px;
+    }
+
+    #comments .comment {
+        border-bottom:1px solid #DDDDDD;
+        padding:20px 10px;
+        margin:0;
+    }
+
+    #comments .comment > .pull-left {
+        margin-right:20px;
+    }
+
+    #comments .comment h4 {
+        font-size: 1.3rem;
+        margin:0 0 10px;
+    }
+
+    #comments .comment h4 span {
+        font-size:14px;
+        float:right;
+        color:#999999;
+    }
+
+    #comments .comment p {
+        margin-bottom:15px;
+        text-align:justify;
+    }
+
+    #comments .media-detail {
+        margin:0;
+    }
+
+    #comments .media-detail li {
+        color:#AAAAAA;
+        font-size: 1rem;
+        padding-right: 10px;
+        font-weight:600;
+    }
+
+    #comments .media-detail a:hover {
+        text-decoration:underline;
+    }
+
+    #comments .media-detail li:last-child {
+        padding-right:0;
+    }
+
+    #comments .media-detail li i {
+        color:#666666;
+        font-size:15px;
+        margin-right:10px;
+    }
+    </style>
+</head>
+<body>
+
+    <section class="content-item" id="comments">
+        <div class="container">   
+            <div class="row">
+                <div class="col-sm-8">  
+                    
+                    <div id="comment_section" class="d-flex flex-column overflow-auto" style="max-height: 350px;">
+
+                        <!-- comment -->
+                        <div class="comment">
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="media-heading">John Doe</h4>
+                                    <ul class="list-unstyled list-inline media-detail pull-left">
+                                        <li><i class="fa fa-calendar"></i>27/10/2022</li>
+                                    </ul>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- comment -->
+                        <div class="comment">
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="media-heading">John Doe</h4>
+                                    <ul class="list-unstyled list-inline media-detail pull-left">
+                                        <li><i class="fa fa-calendar"></i>27/10/2022</li>
+                                    </ul>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- comment -->
+                        <div class="comment">
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="media-heading">John Doe</h4>
+                                    <ul class="list-unstyled list-inline media-detail pull-left">
+                                        <li><i class="fa fa-calendar"></i>27/10/2022</li>
+                                    </ul>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- comment -->
+                        <div class="comment">
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="media-heading">John Doe</h4>
+                                    <ul class="list-unstyled list-inline media-detail pull-left">
+                                        <li><i class="fa fa-calendar"></i>27/10/2022</li>
+                                    </ul>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <!-- comment -->
+                        <div class="comment">
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="media-heading">John Doe</h4>
+                                    <ul class="list-unstyled list-inline media-detail pull-left">
+                                        <li><i class="fa fa-calendar"></i>27/10/2022</li>
+                                    </ul>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                   
+
+                    <!-- new comment -->
+                    <form>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="pull-left">New note</h3>
+                            <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                        </div>                       
+                        <fieldset>
+                            <div class="row">
+                                <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
+                            </div>  	
+                        </fieldset>
+                    </form>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
