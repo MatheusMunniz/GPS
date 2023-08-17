@@ -25,6 +25,35 @@ function backToTop() {
 }
 
 
+// SNP EFFECT SIZE SEARCH
+
+document.addEventListener("DOMContentLoaded", function() {
+  var snptable = document.getElementById("snp_gene_table");
+  var snpsearchInput = document.getElementById("snp_gene_search_input");
+  var snpsearchedGene = document.getElementById("snp_searched_gene");
+
+  snpsearchInput.addEventListener("input", function() {
+      var searchValue = snpsearchInput.value.toLowerCase();
+      var rows = snptable.getElementsByTagName("tr");
+
+      for (var i = 1; i < rows.length; i++) {
+          var geneCell = rows[i].getElementsByTagName("td")[0];
+          var positionCell = rows[i].getElementsByTagName("td")[1];
+          var geneText = geneCell.textContent || geneCell.innerText;
+          var positionText = positionCell.textContent || positionCell.innerText;
+
+          if (geneText.toLowerCase().indexOf(searchValue) > -1 || positionText.toLowerCase().indexOf(searchValue) > -1) {
+              rows[i].style.display = "";
+          } else {
+              rows[i].style.display = "none";
+          }
+      }
+
+      snpsearchedGene.textContent = "Results for: " + searchValue;
+      snpsearchedGene.style.display = "block";
+  });
+});
+
 // SEARCH BY GENE
 
 document.addEventListener("DOMContentLoaded", function() {

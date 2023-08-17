@@ -67,7 +67,7 @@ var chart = JSC.chart('chartDiv', {
             size: 35 
           } 
         }, 
-        points: [{ y: 82}] // Altere aqui a % do gráfico
+        points: [{ y: 23}] // Altere aqui a % do gráfico
       } 
     ], 
     toolbar: { 

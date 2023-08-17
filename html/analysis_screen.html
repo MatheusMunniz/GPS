@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="../src/GPSicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="../css/analysis_screen.css">
-    
 
-    
+
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap CSS -->
@@ -18,10 +18,10 @@
     <!-- Chart.js  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- JSCharting -->
-    <script src="https://code.jscharting.com/latest/jscharting.js"></script>  
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>
     <script type="text/javascript" src="../jsc/jscharting.js"></script>
     <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
-    
+
     <title>GPS - Analysis</title>
   </head>
 
@@ -38,7 +38,7 @@
                         <div class="navbar-nav">
                             <a href="#" class="nav-item nav-link"></a>
                         </div>
-                        
+
                         <div class="d-flex ms-auto profile">
                            <div class="btn-group">
                             <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,9 +54,9 @@
                             </ul>
                           </div>
                         </div>
-    
+
                     </div>
-                </div>        
+                </div>
             </nav>
             <div class="card" style="top: 0; margin: 0; position: sticky; top: 0;">
                 <div class="card-header border-0 d-flex justify-content-center">
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </header>
-       
+
         <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top"><i class="bi bi-arrow-bar-up"></i></button>
 
         <div class="chat-tab" onclick="toggleChatBox()">
@@ -84,7 +84,7 @@
           <div class="d-flex w-100 " style="padding: 10px; transform: translateY(190px);">
             <input type="text" placeholder="Ask me a question" style="padding: 0 10px; width: 100%; height: 30px;">
           </div>
-          
+
         </div>
         <section>
           <div class="genome-grid">
@@ -109,6 +109,7 @@
                         <thead>
                           <th>Gene</th>
                           <th>Position</th>
+                          <th>ADsum</th>
                         </thead>
                         <tbody></tbody>
                       </table>
@@ -120,7 +121,7 @@
 
             <!-- Dowble card: Drugs / Recommendations -->
             <div class="double-row-card d-flex" style="gap: 10px;">
-              
+
               <!-- Drugs -->
               <div class="genome-card card w-100">
                 <!-- Card Header -->
@@ -133,7 +134,7 @@
                 <!-- Card Content -->
                 <div id="cardCollapse2" class="collapse" aria-labelledby="cardHeading" data-bs-parent=".card">
                   <div class="card-body">
-            
+
                     <div>
 
                     </div>
@@ -159,10 +160,10 @@
                       <form class="d-flex ms-auto justify-content-center" style="height: 40px; padding: 0 10px;">
                         <input type="text" id="searchInput" class="form-control me-sm-2" placeholder="Search">
                       </form>
-  
+
                       <div>
                         <ul>
-  
+
                           <li class="recommendation">
                             <h3>Long-term treatment (>6 months)</h3>
                             <p>the ASH guideline panel suggests long-term anticoagulation for secondary prophylaxis (.6 months) rather than short-term treatment alone (3-6 months) (conditional recommendation, low certainty in the evidence of effects).</p>
@@ -179,11 +180,11 @@
                             <h3>Primary prophylaxis</h3>
                             <p>Suggests using thromboprophylaxis over no thromboprophylaxis (conditional recommendation, very low certaninty in the evidence of effects).</p>
                           </li>
-  
+
                         </ul>
                       </div>
                     </div>
-                
+
                   </div>
                 </div>
               </div>
@@ -210,7 +211,7 @@
                         </div>
                         <button type="button" class="btn btn-secondary ms-2" id="fullscreen-button"><i class="bi bi-fullscreen"></i></button>
                     </div>
-                    
+
                     <div id="network-container" style="background-color: #eafdff;" ></div>
                   </div>
                 </div>
@@ -263,66 +264,77 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="d-flex text-center flex-column">
                     <h3 class="pgs-traits-title" style="width: 100%; margin-top: 15px;">Polygenic Scores</h3>
                   </div>
 
                   <div class="w-100" style="display: flex; flex-wrap: wrap;">
-                    
+
                     <div class="w-50 d-flex flex-column" style="gap: 10px;">
 
                       <div class="risk-box w-100" style="padding: 0 4px;">
-  
+
                         <div>
-  
+
                           <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#Risk-analysis-Content">Risk analysis</div>
                           <div class="risk_score_chart_container container collapse" id="Risk-analysis-Content">
-  
+
                             <div style="z-index: 2; padding: 20px;">
-  
+
                               <div class="risk_score_chart_texts">
                                 <p>Decreased risk of liver cirrhosis based on</p>
                                 <h2 id='variants_number'>253,330</h2>
                                 <p> variants we looked at.</p>
                               </div>
                               <div id="labelsWrapper">
-  
+
                                 <div id="iconsDiv" style="width: 380px; height: 30px;"></div>
                                 <div id="labelDiv" style="margin-top: 10px; width: 380px; height: 130px;"></div>
-                          
+
                               </div>
-  
+
                             </div>
-                            
+
                             <div id="chartDiv" style="max-width: 420px; height: 350px;" ></div>
-                            
-                              
+
+
                           </div>
-  
+
                         </div>
-  
-  
+
+
                       </div>
 
                     </div>
-                    
+
                     <div class="w-50 d-flex flex-column" style="gap: 10px;">
 
                       <div class="risk-box w-100" style="padding: 0 4px;">
 
-                        <div class="" style="height: 250;">
-  
+                        <div class="">
+
                           <div class="risk-score-title" data-bs-toggle="collapse" data-bs-target="#SNP-Content">SNP Effect size</div>
-                          <div class="risk-indicators-content scroll container collapse" id="SNP-Content" style="max-height: 210px;">
-  
-                            <table style="width: 100%;">
-                              <thead style="position: sticky; top: 0; background-color: white;">
-                                <th>gene</th>
-                                <th>SNP</th>
-                                <th>Effect size</th>
-                              </thead>
-                              <tbody>
+                          <div class="risk-indicators-content container collapse" id="SNP-Content" style="max-height: 370px;">
+
+
+                            <div style="position: sticky; top: 0; padding-top: 10px; background-color: white; z-index: 100;">
+                              <input style="margin-bottom: 0;" type="text" id="snp_gene_search_input" class="form-control" placeholder="Search">
+                              <p id="snp_searched_gene" style="margin-top: 10px; margin-bottom: 0px; display: none;"></p>
+                            </div>
+
+                            <div class="scroll" style="max-height: 270px;">
+                              <table id="snp_gene_table" style="width: 100%;">
+
+                                <thead style="position: sticky; top: 0; height: 35px;  background-color: white;">
+                                    <tr>
+                                      <th>Associated Genes</th>
+                                      <th>SNP</th>
+                                      <th>Effect size</th>
+                                    </tr>
+                                </thead>
+
+                              <tbody style="max-height: 200px;">
                                 <tr>
                                   <td>BRCA1</td>
                                   <td>rs1799950</td>
@@ -362,18 +374,39 @@
                                   <td>MTHFR</td>
                                   <td>rs1801133</td>
                                   <td>-0.12</td>
+                                <tr>
+                                  <td>TP53</td>
+                                  <td>rs1042522</td>
+                                  <td>-0.27</td>
+                                </tr>
+                                <tr>
+                                  <td>APOE</td>
+                                  <td>rs429358</td>
+                                  <td>0.18</td>
+                                </tr>
+                                <tr>
+                                  <td>IL6</td>
+                                  <td>rs1800795</td>
+                                  <td>0.21</td>
+                                </tr>
+                                <tr>
+                                  <td>MTHFR</td>
+                                  <td>rs1801133</td>
+                                  <td>-0.12</td>
                                 </tr>
                               </tbody>
-                            </table>
-  
+                              </table>
+                            </div>
+                            
+
                           </div>
-  
+
                         </div>
-  
+
                       </div>
-                      
+
                     </div>
-                   
+
                   </div>
                   <!-- ------ -->
                 </div>
@@ -382,14 +415,14 @@
 
             <!-- Education -->
             <div class="education-card card">
-                
+
               <a aria-expanded="false" aria-controls="collapseExample" style="text-decoration: none; background-image: url(../src/boxbackground.png); background-repeat: no-repeat;">
                   <div class="card-header border-0 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample6" role="button">
                       <h3 style="color: white"><img src="../src/GPSicon.png" alt="" style="width: 40px;"> Education</h3>
                   </div>
                   <div class="ratio ratio-16x10 collapse" id="collapseExample6">
                       <div class="embed-responsive embed-responsive-16by10">
-          
+
                           <!-- Vídeo Principal -->
                           <div class="shadow-1-strong" style=" background-color: rgb(32, 58, 162); border: none; margin: 0 0 10px 0;">
                               <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -401,7 +434,7 @@
                                       </div>
                                   </div>
                               </div>
-          
+
                               <div class="row g-0">
                                   <div class="col-lg-6 order-md-2">
                                       <div class="view position-relative">
@@ -411,7 +444,7 @@
                                           <img class="img-fluid" src="../src/analysis_screen/thumbnail.png" alt="Video title">
                                       </div>
                                   </div>
-          
+
                                   <div class="col-lg-6 mx-auto d-flex align-items-center text-white">
                                       <div class="px-4 py-4 py-lg-0">
                                           <h3 class="fw-normal mb-4">Genetics Basics | Chromosomes, Genes, DNA and Traits</h3>
@@ -419,9 +452,9 @@
                                       </div>
                                   </div>
                               </div>
-          
+
                           </div>
-          
+
                           <!-- Vídeos adicionais -->
 
                           <div  style="background:#e8efff;">
@@ -497,10 +530,10 @@
                                 </div>
                             </div>
                           </div>
-                          
+
 
                           <!-- Vídeos adicionais -->
-          
+
                       </div>
                   </div>
               </a>
@@ -514,7 +547,7 @@
     <script src="../js/analysis_screen/analysis_screen.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+
     <!-- Cytoscape -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.1/cytoscape.min.js"></script>
     <script src="../js/analysis_screen/cytoscape.js"></script>

@@ -13,6 +13,10 @@ fetch('../json/testesample_b.json')
             var positionCell = document.createElement("td");
             positionCell.textContent = sample.data.pos;
             row.appendChild(positionCell);
+            
+            var genotypeCell = document.createElement("td");
+            genotypeCell.textContent = sample.genotype.gbMgrayjWpOO8zkrx.ADsum;
+            row.appendChild(genotypeCell);
 
             // Adicione mais células conforme necessário
 
