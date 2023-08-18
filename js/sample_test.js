@@ -15,7 +15,7 @@ fetch('../json/testesample_b.json')
             row.appendChild(positionCell);
             
             var genotypeCell = document.createElement("td");
-            genotypeCell.textContent = sample.genotype.gbMgrayjWpOO8zkrx.ADsum;
+            genotypeCell.textContent = sample.genotype.gbMgrayjWpOO8zkrx.RAT;
             row.appendChild(genotypeCell);
 
             // Adicione mais células conforme necessário

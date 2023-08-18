@@ -4,10 +4,9 @@
     align-items: center;
     border-bottom: 2px #0137a3;
 }
-#welcome-box h2 {
+#welcome-box h3 {
     line-height: 1;
     padding: 5px 10px;
-    border-right: 5px solid #0137a3;
     margin: 0;
 
 }
@@ -15,13 +14,16 @@
     align-items: center;
     gap: 10px;
 }
-#welcome-box #hello-txt {
+#welcome-box #hello-txt  h2{
+    margin: 0;
     color: #0137a3;
     width: 100%;
-    padding: 10px 10px;
-    border-bottom: 4px solid #0137a3;
+    font-size: 2rem;
+    padding: 0 10px;
+    
 }
 #welcome-box #hello-txt #user{
+    margin-bottom: 10px;
     color: #05cc03;
 }
 #welcome-box #hello-box h1{
@@ -29,6 +31,14 @@
 }
 #mascot {
     width: 100px;
+}
+#welcome-box h3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #555555;
+    padding-left: 0;
+    margin-bottom: 5px;
 }
 
 
