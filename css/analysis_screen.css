@@ -27,7 +27,7 @@ header .card {
         padding: 5px 10px;
         background: rgb(206, 247, 255);
     }
-    .genome-card .card-header button i, img{
+    .genome-card .card-header button i, .card-header img{
       width: 50px;
       font-size: 40px; 
       color: #0137a3 !important; 
@@ -152,7 +152,7 @@ header .card {
 /* GENE NETWORK */
 #network-container {
     width: 100%;
-    height: 100%;
+    height: 500px;
 }
   #gene-network-header {
       padding: 15px 10px !important;
